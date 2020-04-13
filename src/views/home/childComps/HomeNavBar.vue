@@ -5,10 +5,13 @@
     </el-col>
     <!-- 中间内容 -->
     <el-col :span="16">
-      <div class="nav-bar-logo">the box</div>
+      <div class="nav-bar-logo animated bounceIn delay-1s">the box</div>
       <div class="nav-bar-bg">
-        <div class="about-me" 
-         v-for="item in navBarInfo" :key="item.id">
+        <div
+          class="about-me animated bounceInRight delay-1s"
+          v-for="item in navBarInfo"
+          :key="item.id"
+        >
           {{item.text}}
           <span class="about-me-img">
             <img src="~assets/rapImg/14.jpg" alt />
@@ -39,13 +42,10 @@ export default {
           id: 3,
           text: "本页的制作"
         }
-      ],
-     
+      ]
     };
   },
-  methods:{
-
-  }
+  methods: {}
 };
 </script>
 
@@ -61,14 +61,14 @@ export default {
 .about-me {
   background-color: #bdb29c;
   height: 100%;
-  font-size: 16px;
-  margin: 0 4px;
+  font-size: 14px;
+  margin: 0 5px;
   border-radius: 30px;
   overflow: hidden;
   padding: 0 10px;
   font-weight: 700;
 }
-.about-me:hover{
+.about-me:hover {
   cursor: pointer;
 }
 .about-me-img {
@@ -81,11 +81,11 @@ export default {
 .nav-bar-logo {
   color: #ffffff;
   font-size: 40px;
-    height: 60px;
+  height: 60px;
   line-height: 60px;
   float: left;
   font-family: best;
-  background-color: #2B2C30;
+  background-color: #2b2c30;
   clear: both;
 }
 </style>

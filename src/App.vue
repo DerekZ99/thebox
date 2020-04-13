@@ -1,33 +1,13 @@
 <template>
   <div id="app">
-    <!-- <transition v-if="showAnimation">
-      <starter-animation></starter-animation>
-    </transition> -->
-
-    <transition enter-active-class="animated slideInUp">
-      <router-view></router-view>
-    </transition>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import StarterAnimation from "components/content/starterAnimation/StarterAnimation";
-
 export default {
   name: "App",
-  components: {
-    StarterAnimation
-  },
-  data() {
-    return {
-      showAnimation: true
-    };
-  },
-  created() {
-    setTimeout(() => {
-      this.showAnimation = !this.showAnimation;
-    }, 6000);
-  }
+  components: {}
 };
 </script>
 

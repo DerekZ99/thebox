@@ -1,5 +1,5 @@
 <template>
-  <div class="starter animated slideOutUp delay-5s">
+  <div class="starter">
     <img class="animated fadeIn slower" src="~assets/rapImg/robby.jpg" alt />
     <div class="title">
       <div class="main-title animated fadeIn slower delay-2s">

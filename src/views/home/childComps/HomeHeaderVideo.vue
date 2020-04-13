@@ -54,8 +54,8 @@ export default {
 
 <style scoped>
 .header {
-  /* height: 100%; */
-  height: 250px;
+
+  height: 30vh;
   overflow: hidden;
   position: relative;
 }
