@@ -1,11 +1,11 @@
 <template>
-  <div class="home">
-    <starter-animation class="animated slideOutUp delay-5s" v-if="showAnimation"></starter-animation>
-    <div v-else class="animated slideInUp">
+  <div :class="{home:!showAnimation}">
+    <!-- <starter-animation class="animated slideOutUp delay-5s" v-if="showAnimation"></starter-animation> -->
+    <!-- <div v-else class="animated slideInUp"> -->
       <home-header-video></home-header-video>
       <home-nav-bar></home-nav-bar>
       <home-box-animation></home-box-animation>
-    </div>
+    <!-- </div> -->
   </div>
 </template>
 
@@ -37,7 +37,8 @@ export default {
 
 <style scoped>
 .home {
-  height: 100vh;
+  overflow: hidden;
+  height: 90vh;
   background-color: #333438;
 }
 </style>

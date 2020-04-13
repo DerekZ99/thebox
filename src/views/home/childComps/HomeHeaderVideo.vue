@@ -11,7 +11,9 @@
     ></video>
     <!-- logo文字 -->
     <h1 class="title" @mouseenter="mouseOn" @mouseleave="mouseOn">
-      <div class="main-title">the box</div>
+      <div class="main-title"
+        :class="isShowCloseBox?'animated flash':''"
+      >the box</div>
       <!-- 关闭窗口 -->
       <transition
         enter-active-class="animated fadeInUp fast"
@@ -54,7 +56,6 @@ export default {
 
 <style scoped>
 .header {
-
   height: 30vh;
   overflow: hidden;
   position: relative;

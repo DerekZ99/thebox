@@ -1,15 +1,16 @@
 <template>
-  <el-row>
-    <el-col :span="4">
-      <div class="nav-bar-bg"></div>
-    </el-col>
+  <el-row class="el-row">
     <!-- 中间内容 -->
-    <el-col :span="16">
+    <el-col :span="16" :offset="4">
       <div class="nav-bar-logo animated bounceIn delay-1s">the box</div>
-      <div class="nav-bar-bg">
+      <div class="nav-bar-bg animated bounceInRight delay-1s">
         <div
-          class="about-me animated bounceInRight delay-1s"
-          v-for="item in navBarInfo"
+          @mouseenter="mouseOn(index)"
+          @mouseleave="curIndex = 4"
+          @click="tabClick(item.path)"
+          :class="curIndex === index?'animated bounce': ''"
+          class="about-me"
+          v-for="(item, index) in navBarInfo"
           :key="item.id"
         >
           {{item.text}}
@@ -18,9 +19,6 @@
           </span>
         </div>
       </div>
-    </el-col>
-    <el-col :span="4">
-      <div class="nav-bar-bg"></div>
     </el-col>
   </el-row>
 </template>
@@ -32,30 +30,44 @@ export default {
       navBarInfo: [
         {
           id: 1,
-          text: "我的收藏"
+          text: "我的收藏",
+          path:'/collection'
         },
         {
           id: 2,
-          text: "关于我"
+          text: "关于我",
+          path:'/myself'
         },
         {
           id: 3,
-          text: "本页的制作"
+          text: "本页的制作",
+          path:'/work'
         }
-      ]
+      ],
+      curIndex: 0
     };
   },
-  methods: {}
+  methods: {
+    mouseOn(index) {
+      this.curIndex = index;
+    },
+    tabClick(path){
+      this.$router.push(path)
+    }
+  }
 };
 </script>
 
 <style scoped>
+.el-row {
+  background-color: #2b2c30;
+}
 .nav-bar-bg {
   display: flex;
   height: 50px;
   line-height: 50px;
   padding: 5px;
-  background-color: #2b2c30;
+
   flex-direction: row-reverse;
 }
 .about-me {
