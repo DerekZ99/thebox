@@ -2,13 +2,18 @@
   <el-row class="el-row">
     <!-- 中间内容 -->
     <el-col :span="16" :offset="4">
-      <div class="nav-bar-logo animated bounceIn delay-1s">the box</div>
+      <h1>
+        <a href="javascript:;" @click="jumpToHome">
+          <div class="nav-bar-logo animated bounceIn delay-1s">the box</div>
+        </a>
+      </h1>
+
       <div class="nav-bar-bg animated bounceInRight delay-1s">
         <div
           @mouseenter="mouseOn(index)"
           @mouseleave="curIndex = 4"
           @click="tabClick(item.path)"
-          :class="curIndex === index?'animated bounce': ''"
+          :class="curIndex === index?'animated jello': ''"
           class="about-me"
           v-for="(item, index) in navBarInfo"
           :key="item.id"
@@ -31,17 +36,17 @@ export default {
         {
           id: 1,
           text: "我的收藏",
-          path:'/collection'
+          path: "/collection"
         },
         {
           id: 2,
           text: "关于我",
-          path:'/myself'
+          path: "/myself"
         },
         {
           id: 3,
           text: "本页的制作",
-          path:'/work'
+          path: "/work"
         }
       ],
       curIndex: 0
@@ -51,8 +56,11 @@ export default {
     mouseOn(index) {
       this.curIndex = index;
     },
-    tabClick(path){
-      this.$router.push(path)
+    tabClick(path) {
+      this.$router.push(path);
+    },
+    jumpToHome(){
+      this.$router.push('/home');
     }
   }
 };

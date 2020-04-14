@@ -7,7 +7,6 @@
       autoplay
       :muted="!isMuted"
       loop
-      pause
     ></video>
     <!-- logo文字 -->
     <h1 class="title" @mouseenter="mouseOn" @mouseleave="mouseOn">
