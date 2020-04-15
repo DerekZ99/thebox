@@ -1,11 +1,11 @@
 <template>
   <div :class="{home:!showAnimation}">
-    <!-- <starter-animation class="animated slideOutUp delay-5s" v-if="showAnimation"></starter-animation> -->
-    <!-- <div v-else class="animated slideInUp"> -->
+    <starter-animation class="animated slideOutUp delay-5s" v-if="showAnimation"></starter-animation>
+    <div v-else class="animated slideInUp">
       <home-header-video></home-header-video>
       <home-nav-bar></home-nav-bar>
       <home-box-animation></home-box-animation>
-    <!-- </div> -->
+    </div>
   </div>
 </template>
 

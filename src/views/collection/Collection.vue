@@ -4,8 +4,8 @@
     <el-row>
       <el-col :span="20" :offset="2">
         <p class="intro">
-          Hi!欢迎来到我的收藏页面。我喜欢说唱音乐，下面有我喜欢的图片与音乐。你可以在听歌的同时来浏览下方的图片。点击图片可以放大他们哦 Enjoy
-          it :)
+          Hi!欢迎来到我的收藏页面。我喜欢说唱音乐，下面有我喜欢的图片与音乐。你可以在听歌的同时来浏览下方的图片。点击图片可以放大他们哦
+          Enjoy it :)
         </p>
         <Music class="music"></Music>
         <collection-list
@@ -92,7 +92,7 @@ export default {
   height: 100%;
 }
 .mask img {
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

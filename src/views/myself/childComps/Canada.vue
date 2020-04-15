@@ -1,5 +1,5 @@
 <template>
-  <div class="intro">
+  <div class="canada">
     <p>我在我17岁那年，也就是2013年左右去了加拿大读书，在那呆了六年的时间。</p>
     <p>
       我在一个叫belleville的小镇子读完了高中，完整的体验了三年的乡村生活。高中毕业之后，来到多伦多这个大城市开始了我的College生涯
@@ -108,29 +108,29 @@ export default {
 </script>
 
 <style>
-.intro {
+.canada {
   color: #ffffff;
   font-size: 14px;
 }
-.intro p {
+.canada p {
   margin: 20px 0;
 }
-.el-collapse {
+.canada .el-collapse {
   border: 1px solid #252526;
 }
-.intro .el-collapse-item__header {
+.canada .el-collapse-item__header {
   padding-left: 10px;
-  background-color: #FFD7A4;
+  background-color: #ffd7a4;
   border: none;
 }
-.swiper {
+.canada .swiper {
   background-color: #383838;
 }
-.el-collapse-item__wrap {
+.canada .el-collapse-item__wrap {
   background-color: #2b2c30;
-  border-bottom:1px solid #2B2C30 ;
+  border-bottom: 1px solid #2b2c30;
 }
-.swiper h3 {
+.canada .swiper h3 {
   text-align: center;
   color: #ffffff;
 }
@@ -141,7 +141,7 @@ export default {
   left: 50%;
   transform: translate(-50%);
 }
-.el-carousel__button {
+.canada .el-carousel__button {
   width: 8px;
 }
 </style>

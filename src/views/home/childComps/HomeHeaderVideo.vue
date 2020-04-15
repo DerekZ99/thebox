@@ -11,8 +11,7 @@
     <!-- logo文字 -->
     <h1 class="title" @mouseenter="mouseOn" @mouseleave="mouseOn">
       <div class="main-title"
-        :class="isShowCloseBox?'animated flash':''"
-      >the box</div>
+        :class="isShowCloseBox?'animated flash':''">the box</div>
       <!-- 关闭窗口 -->
       <transition
         enter-active-class="animated fadeInUp fast"
@@ -23,6 +22,7 @@
           <el-switch v-model="isCloseVideo" active-color="#13ce66" inactive-color="#ff4949"></el-switch>
         </div>
       </transition>
+      <!-- 关闭音乐窗口 -->
       <transition
         enter-active-class="animated fadeInUp fast"
         leave-active-class="animated fadeOutDown fast"
@@ -65,7 +65,6 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  background-color: #fff;
 }
 .title {
   position: relative;

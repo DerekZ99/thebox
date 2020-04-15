@@ -45,7 +45,7 @@ export default {
         },
         {
           id: 3,
-          text: "本页的制作",
+          text: "本站的制作",
           path: "/work"
         }
       ],
