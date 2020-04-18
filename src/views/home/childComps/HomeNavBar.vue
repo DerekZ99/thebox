@@ -18,7 +18,8 @@
           v-for="(item, index) in navBarInfo"
           :key="item.id"
         >
-          {{item.text}}
+          <span>{{item.text}}</span>
+
           <span class="about-me-img">
             <img src="~assets/rapImg/14.jpg" alt />
           </span>
@@ -49,8 +50,11 @@ export default {
           path: "/work"
         }
       ],
-      curIndex: 0
+      curIndex: 0,
     };
+  },
+  computed: {
+
   },
   methods: {
     mouseOn(index) {
@@ -59,8 +63,8 @@ export default {
     tabClick(path) {
       this.$router.push(path);
     },
-    jumpToHome(){
-      this.$router.push('/home');
+    jumpToHome() {
+      this.$router.push("/home");
     }
   }
 };

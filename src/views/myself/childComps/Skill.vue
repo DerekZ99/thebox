@@ -15,14 +15,18 @@
           <span>{{ item.skillType }}</span>
         </div>
         <div class="skill-item">
-          <span v-for="(value, index) in item.skillExtend" :key="index">{{
+          <span v-for="(value, index) in item.skillExtend" :key="index">
+            {{
             value
-          }}</span>
+            }}
+          </span>
         </div>
         <div class="skill-item">
-          <span v-for="(value, index) in item.skillDetail" :key="index">{{
+          <span v-for="(value, index) in item.skillDetail" :key="index">
+            {{
             value
-          }}</span>
+            }}
+          </span>
         </div>
       </div>
     </div>
@@ -43,7 +47,7 @@ export default {
         {
           id: 2,
           skillType: "CSS基础",
-          skillExtend: ["CSS3", "BootStrip"],
+          skillExtend: ["CSS3", "BootStrap"],
           skillDetail: [
             "新增样式",
             "新增的选择器",
@@ -59,7 +63,7 @@ export default {
           skillDetail: [
             "组件化，模块化开发",
             "vue-router配置路由映射关系",
-            "利用axios实现前后端数据交互",
+            "利用vue-axios实现前后端数据交互",
             "利用第三方库或插件实现多更功能和效果"
           ]
         },
@@ -86,13 +90,13 @@ export default {
   color: #fff;
 }
 .skill h2 {
-  margin-top:10px ;
+  margin-top: 10px;
   text-align: center;
   font-size: 16px;
 }
 .skill-row {
   display: flex;
-  background-image: linear-gradient(to right, #1f2830, #0E2132);
+  background-image: linear-gradient(to right, #504972, #b2697d);
   justify-content: space-between;
   align-items: center;
   margin: 10px 0px;
