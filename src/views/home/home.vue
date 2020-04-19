@@ -1,6 +1,6 @@
 <template>
   <div :class="{home:!showAnimation}">
-    <starter-animation class="animated slideOutUp delay-5s" v-if="showAnimation"></starter-animation>
+    <starter-animation @BtnClicked="starterClick" v-if="showAnimation"></starter-animation>
     <div v-else class="animated slideInUp">
       <home-header-video></home-header-video>
       <home-nav-bar></home-nav-bar>
@@ -22,15 +22,15 @@ export default {
     HomeBoxAnimation,
     StarterAnimation
   },
+  methods: {
+    starterClick() {
+      this.showAnimation = !this.showAnimation;
+    }
+  },
   data() {
     return {
       showAnimation: true
     };
-  },
-  mounted() {
-    setTimeout(() => {
-      this.showAnimation = !this.showAnimation;
-    }, 6000);
   }
 };
 </script>
@@ -38,7 +38,7 @@ export default {
 <style scoped>
 .home {
   overflow: hidden;
-  height: 90vh;
-  background-color: #333438;
+  background:rgba(0, 0, 0, .8);
 }
+
 </style>

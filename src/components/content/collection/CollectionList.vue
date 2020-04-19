@@ -25,7 +25,25 @@ export default {
 </script>
 
 <style scoped>
-.collection-list {
-  column-count: 5;
+@media screen and (min-width: 480px) {
+  .collection-list {
+    column-count: 2;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .collection-list {
+    column-count: 3;
+  }
+}
+@media screen and (min-width: 992px) {
+  .collection-list {
+    column-count: 4;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .collection-list {
+    column-count: 5;
+  }
 }
 </style>

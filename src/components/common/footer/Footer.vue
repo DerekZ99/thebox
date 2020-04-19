@@ -2,7 +2,7 @@
   <div class="footer">
     <el-row>
       <el-col :span="16" :offset="4">
-        <div class="text-area animated zoomInUp slower">
+        <div class="text-area">
           <span class="text">本站使用 Vue.js + Element UI 制作</span>
 
           <span class="logo-img">
@@ -21,14 +21,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-     
-    };
-  },
-  methods: {
- 
-  }
 };
 </script>
 
@@ -36,6 +28,9 @@ export default {
 .footer {
   color: #ffffff;
   height: 10vh;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
   background-color: #1e1e1e;
   padding: 20px 0;
   box-sizing: border-box;

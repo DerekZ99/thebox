@@ -3,77 +3,58 @@
     <h2>我的技能树</h2>
     <!-- 技能树展示 -->
     <div class="skill-tree">
-      <div
-        class="skill-row"
-        :class="curIndex === index ? 'animated pulse' : ''"
-        @mouseenter="mouseOn(index)"
-        @mouseleave="curIndex = 5"
-        v-for="(item, index) in skill"
-        :key="index"
-      >
-        <div class="skill-item">
-          <span>{{ item.skillType }}</span>
-        </div>
-        <div class="skill-item">
-          <span v-for="(value, index) in item.skillExtend" :key="index">
-            {{
-            value
-            }}
-          </span>
-        </div>
-        <div class="skill-item">
-          <span v-for="(value, index) in item.skillDetail" :key="index">
-            {{
-            value
-            }}
-          </span>
-        </div>
-      </div>
+      <!-- 展示html的技能 -->
+      <skill-item class="html">
+        <span slot="skillExtend">HTML</span>
+        <span slot="skillExtend">HTML5</span>
+        <span slot="skillDetail">标签语义化</span>
+        <span slot="skillDetail">新增的标签</span>
+        <img class="skillImg" slot="skillType" src="~assets/skillBg/html.jpg" alt />
+      </skill-item>
+      <skill-item class="css">
+        <span slot="skillExtend">CSS</span>
+        <span slot="skillExtend">CSS3</span>
+        <span slot="skillExtend">BootStrap</span>
+        <span slot="skillDetail">新增样式</span>
+        <span slot="skillDetail">新增的选择器</span>
+        <span slot="skillDetail">flex布局与响应式布局</span>
+        <span slot="skillDetail">动画，过渡，定位</span>
+        <span slot="skillDetail">媒体查询，适配</span>
+        <img class="skillImg" slot="skillType" src="~assets/skillBg/css3.jpg" alt />
+      </skill-item>
+      <skill-item class="js">
+        <span slot="skillExtend">原生js</span>
+        <span slot="skillExtend">Jquery</span>
+        <span slot="skillExtend">Vue.js</span>
+        <span slot="skillDetail">熟悉组件化，模块化开发</span>
+        <span slot="skillDetail">熟悉ES6增强语法</span>
+        <span slot="skillDetail">使用vue-router配置路由映射关系</span>
+        <span slot="skillDetail">封装vue组件，实现组件的复用与管理</span>
+        <span slot="skillDetail">利用第三方库或插件实现更多功能与效果</span>
+        <img class="skillImg" slot="skillType" src="~assets/skillBg/javas.jpg" alt />
+      </skill-item>
+      <skill-item class="ajax">
+        <span slot="skillExtend">axios库</span>
+        <span slot="skillExtend">mongodb数据库</span>
+        <span slot="skillExtend">express框架（了解）</span>
+        <span slot="skillExtend">node.js（了解）</span>
+        <span slot="skillExtend">art-template（了解）</span>
+        <span slot="skillDetail">通过封装axios实现前后端数据交互</span>
+        <span slot="skillDetail">利用express框架定义路由</span>
+        <img class="skillImg" slot="skillType" src="~assets/skillBg/ajax.png" alt />
+      </skill-item>
     </div>
   </div>
 </template>
 
 <script>
+import SkillItem from "./SkillItem";
 export default {
+  components: {
+    SkillItem
+  },
   data() {
     return {
-      skill: [
-        {
-          id: 1,
-          skillType: "HTML基础",
-          skillExtend: ["HTML5"],
-          skillDetail: ["标签语义化", "新增的标签"]
-        },
-        {
-          id: 2,
-          skillType: "CSS基础",
-          skillExtend: ["CSS3", "BootStrap"],
-          skillDetail: [
-            "新增样式",
-            "新增的选择器",
-            "flex布局与响应式布局",
-            "动画，过渡，定位",
-            "媒体查询，适配"
-          ]
-        },
-        {
-          id: 3,
-          skillType: "JavaScript基础",
-          skillExtend: ["Jquery", "Vue.js"],
-          skillDetail: [
-            "组件化，模块化开发",
-            "vue-router配置路由映射关系",
-            "利用vue-axios实现前后端数据交互",
-            "利用第三方库或插件实现多更功能和效果"
-          ]
-        },
-        {
-          id: 4,
-          skillType: "Ajax与node.js（了解）",
-          skillExtend: ["mongodb", "express框架"],
-          skillDetail: ["cookie和session", "使用ajax发送和响应网络请求"]
-        }
-      ],
       curIndex: 0
     };
   },
@@ -86,34 +67,23 @@ export default {
 </script>
 
 <style scoped>
-.skill {
-  color: #fff;
-}
 .skill h2 {
   margin-top: 10px;
   text-align: center;
-  font-size: 16px;
+  font-size: 26px;
+  font-family: starter;
+  color: #fff;
 }
-.skill-row {
-  display: flex;
-  background-image: linear-gradient(to right, #504972, #b2697d);
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px 0px;
-  border-radius: 10px;
+.html {
+  background-color: #ffffff;
 }
-.skill-item {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 10px;
+.css {
+  background-color: #1095cd;
 }
-.skill-item span {
-  border: 1px solid #ffffff;
-  padding: 5px 10px;
-  margin: 5px 0;
-  display: block;
-  border-radius: 5px;
+.js {
+  background-color: #e8d354;
+}
+.ajax {
+  background-color: #e8e8e8;
 }
 </style>

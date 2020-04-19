@@ -1,25 +1,20 @@
 <template>
   <div class="collection animated bounceInUp">
-    <home-nav-bar></home-nav-bar>
-    <el-row>
-      <el-col :span="20" :offset="2">
-        <p class="intro">
-          Hi!欢迎来到我的收藏页面。我喜欢说唱音乐，下面有我喜欢的图片与音乐。你可以在听歌的同时来浏览下方的图片。点击图片可以放大他们哦
-          Enjoy it :)
-        </p>
-        <Music class="music"></Music>
-        <collection-list
-          :imgSrc="imgSrc"
-          ref="collectionList"
-        ></collection-list>
-      </el-col>
-    </el-row>
-    <div
-      class="mask animated fadeIn faster"
-      v-if="isShowMask"
-      @click="hiddenMask"
-    >
-      <img :src="imgSrc[clickIndex]" alt="" />
+    <div class="content">
+      <home-nav-bar></home-nav-bar>
+      <el-row class="row">
+        <el-col :span="20" :offset="2">
+          <p class="intro">
+            Hi!欢迎来到我的收藏页面。我喜欢说唱音乐，下面有我喜欢的图片与音乐。你可以在听歌的同时来浏览下方的图片。点击图片可以放大他们哦
+            Enjoy it :)
+          </p>
+          <Music class="music"></Music>
+          <collection-list :imgSrc="imgSrc" ref="collectionList"></collection-list>
+        </el-col>
+        <div class="mask animated fadeIn faster" v-show="isShowMask" @click="hiddenMask">
+          <img :src="imgSrc[clickIndex]" alt />
+        </div>
+      </el-row>
     </div>
   </div>
 </template>
@@ -75,9 +70,16 @@ export default {
 
 <style scoped>
 .collection {
-  height: 90vh;
-  overflow: auto;
+  background: url("~assets/boxImg/otherBg.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+  margin-bottom: 10vh;
 }
+.content {
+  background: rgba(0, 0, 0, 0.5);
+}
+
 .intro {
   margin: 20px 0;
   font-size: 14px;
@@ -85,8 +87,6 @@ export default {
 }
 .mask {
   position: absolute;
-  top: 0;
-  left: 0;
   background: rgba(0, 0, 0, 0.6);
   width: 100%;
   height: 100%;

@@ -3,7 +3,7 @@
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
-    <Footer v-if="isShowFooter"></Footer>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -13,27 +13,25 @@ export default {
   name: "App",
   components: {
     Footer
-  },
-  data() {
-    return {
-      isShowFooter: false
-    };
-  },
-  mounted() {
-    setTimeout(() => {
-      this.isShowFooter = !this.isShowFooter;
-    }, 6000);
   }
 };
 </script>
 
 <style>
 #app {
-  background-color: #333438;
+  background: #333438;
 }
 @import "./assets/css/base.css";
 @font-face {
   font-family: best;
   src: url("~assets/font/The-Best-Night-1.ttf");
+}
+@font-face {
+  font-family: navbar;
+  src: url("~assets/font/navbar.ttf");
+}
+@font-face {
+  font-family: starter;
+  src: url("~assets/font/starter.ttf");
 }
 </style>
