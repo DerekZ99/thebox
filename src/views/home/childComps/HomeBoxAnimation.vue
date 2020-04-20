@@ -56,7 +56,7 @@ export default {
 }
 .content {
   background: url("~assets/boxImg/box1.jpg") no-repeat;
-  background-size: 100%;
+  background-size:cover;
   background-position: 50% 50%;
 }
 </style>

@@ -2,7 +2,7 @@
   <div class="work-list">
     <h2>目录</h2>
     <ul>
-      <li @click="listClick(item)" :class="{active:item.isActive}" v-for="(item, index) in title" :key="index">·{{item.title}}</li>
+      <li class="list-item" @click="listClick(item)" :class="{active:item.isActive}" v-for="(item, index) in title" :key="index">·{{item.title}}</li>
     </ul>
   </div>
 </template>
@@ -40,5 +40,8 @@ h2{
   color: red;
   font-size: 20px;
   font-weight: 700;
+}
+.list-item:hover{
+  cursor: pointer;
 }
 </style>

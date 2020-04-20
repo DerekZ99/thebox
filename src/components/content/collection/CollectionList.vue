@@ -30,7 +30,6 @@ export default {
     column-count: 2;
   }
 }
-
 @media screen and (min-width: 768px) {
   .collection-list {
     column-count: 3;
