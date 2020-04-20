@@ -37,8 +37,12 @@ export default {
     };
   },
   methods: {
-    fixHeight() {
-      this.isFixHeight = !this.isFixHeight;
+    fixHeight(num) {
+      if (!num) {
+        this.isFixHeight = true;
+      } else {
+        this.isFixHeight = false;
+      }
     }
   }
 };

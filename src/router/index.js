@@ -5,6 +5,7 @@ const Home = () => import("../views/home/home");
 const Myself = () => import("../views/myself/Myself")
 const Collection = () => import("../views/collection/Collection")
 const Work = () => import("../views/work/Work")
+
 Vue.use(VueRouuter);
 
 const routes = [{
@@ -27,7 +28,7 @@ const routes = [{
   {
     path: "/work",
     component: Work
-  }
+  },
 ];
 
 const router = new VueRouuter({

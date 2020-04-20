@@ -1,6 +1,6 @@
 <template>
   <div class="workFolder">
-    <el-collapse v-model="activeNames" @change="handleChange" accordion>
+    <el-collapse ref="collapse" v-model="activeNames" @change="handleChange" accordion>
       <!-- generalInfo内容 -->
       <el-collapse-item title="开始工作" name="1">
         <div class="folder">
@@ -31,31 +31,49 @@
         </div>
       </el-collapse-item>
     </el-collapse>
+    <work-list
+    v-show="activeNames"
+      :class="activeNames?'animated bounceIn':''"
+      @listItemClick="listItemClicked"
+      :title="item"
+    ></work-list>
   </div>
 </template>
 
 <script>
+// 引入详细内容
 import GeneralInfo from "./GeneralInfo";
 import IntroAnimation from "./IntroAnimation";
 import HeaderVideo from "./HeaderVideo";
 import AnimatedCss from "./AnimatedCss";
 import ElementUi from "./ElementUi";
+// 引入目录
+import WorkList from "./WorkList";
 export default {
   components: {
     GeneralInfo,
     IntroAnimation,
     HeaderVideo,
     AnimatedCss,
-    ElementUi
+    ElementUi,
+    WorkList
   },
   data() {
     return {
-      activeNames: ["0"]
+      activeNames: "",
+      item: null
     };
+  },
+  mounted() {
+    this.item = this.$refs.collapse.$children;
   },
   methods: {
     handleChange(val) {
-      this.$emit("folderClose");
+      const activeNum = this.activeNames;
+      this.$emit("folderClose", activeNum);
+    },
+    listItemClicked(activeNum) {
+      this.activeNames = activeNum;
     }
   }
 };
@@ -72,6 +90,6 @@ export default {
   padding-left: 10px;
 }
 .workFolder .el-collapse-item__wrap {
-  background-color: #FFF7DD;
+  background-color: #fff7dd;
 }
 </style>
