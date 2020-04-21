@@ -1,7 +1,9 @@
 <template>
-  <div class="item" @click="itemClick" :class="{active:isActive}">
-    <slot></slot>
-    <img v-if="isActive" src="~assets/rapImg/14.jpg" alt />
+  <div @mouseenter="mouseOn" @mouseleave="mouseOn" :class="isShowAnimate?'animated swing faster':''">
+    <div class="item" @click="itemClick" :class="{active:isActive}">
+      <slot></slot>
+      <img v-if="isActive" src="~assets/rapImg/14.jpg" alt />
+    </div>
   </div>
 </template>
 
@@ -13,9 +15,17 @@ export default {
       default: ""
     }
   },
+  data(){
+    return{
+      isShowAnimate:false
+    }
+  },
   methods: {
     itemClick() {
       this.$router.push(this.path);
+    },
+    mouseOn(){
+      this.isShowAnimate = !this.isShowAnimate  
     }
   },
   computed: {

@@ -1,5 +1,5 @@
 <template>
-  <div class="work">
+  <div class="work animated bounceInUp">
     <div class="content" :class="{fixHeight:isFixHeight}">
       <home-nav-bar></home-nav-bar>
       <el-row class="row">

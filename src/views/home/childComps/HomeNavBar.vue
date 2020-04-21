@@ -23,6 +23,7 @@ export default {
   components: {
     HomeNavBarItem
   },
+
   methods: {
     jumpToHome() {
       this.$router.push("/home");
@@ -33,7 +34,7 @@ export default {
 
 <style scoped>
 .el-row {
-  background-color: #1E1E1E;
+  background-color: #1e1e1e;
 }
 .nav-bar-bg {
   display: flex;
@@ -46,7 +47,7 @@ export default {
   font-size: 40px;
   float: left;
   font-family: best;
-  background-color: #1E1E1E;
+  background-color: #1e1e1e;
   clear: both;
 }
 </style>

@@ -2,20 +2,21 @@
   <div class="canada">
     <p>我在我17岁那年，也就是2013年左右去了加拿大读书，在那呆了六年的时间。</p>
     <p>
-      我在一个叫belleville的小镇子读完了高中，完整的体验了三年的乡村生活。高中毕业之后，来到多伦多这个大城市开始了我的College生涯
+      我在一个叫belleville的小镇子读完了高中，完整的体验了三年的乡村生活。高中毕业之后，来到多伦多这个大城市开始了我的College生涯。
     </p>
     <p>出国留学收获了什么？其实留学生挺苦的,用一句话概括那就是磨炼了自己。</p>
     <el-collapse class="collapse" v-model="activeNames" @change="handleChange">
-      <el-collapse-item title="点击这里有我在加拿大拍的照片" name="1">
+      <el-collapse-item title="这里有在加拿大拍的照片，点击下方图片可以放大。点击此处可以隐藏图片" name="1">
         <!-- 轮播图 -->
-        <el-carousel v-if="isShowSwiper" :interval="5000">
+        <el-carousel v-if="isShowSwiper" :interval="8000">
           <el-carousel-item
             class="swiper"
             v-for="item in canadaImg"
             :key="item.id"
+
           >
             <h3>{{ item.title }}</h3>
-            <img :src="item.img" class="image" alt />
+            <img :src="item.img" class="image" alt @click="imgClick(item)" />
           </el-carousel-item>
         </el-carousel>
       </el-collapse-item>
@@ -102,6 +103,10 @@ export default {
   methods: {
     handleChange(val) {
       this.isShowSwiper = !this.isShowSwiper;
+    },
+    imgClick(item){
+     
+      this.$emit("imgClicked",item)
     }
   }
 };
