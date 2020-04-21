@@ -29,7 +29,7 @@ h2{
   font-size: 25px;
 }
 .work-list {
-  position: fixed;
+  position: fixed !important;
   left: 2%;
   top: 40%;
 
