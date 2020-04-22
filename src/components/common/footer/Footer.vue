@@ -7,10 +7,7 @@
 
           <span class="logo-img">
             <a href="https://cloud.tencent.com/developer/doc/1270">
-              <img
-                src="https://main.qcloudimg.com/raw/c1e4f4dbc9f8d54cbbdb94da8a38d6f9.svg"
-                alt
-              />
+              <img src="https://main.qcloudimg.com/raw/c1e4f4dbc9f8d54cbbdb94da8a38d6f9.svg" alt />
             </a>
             <a href="https://cn.vuejs.org/">
               <img src="~assets/vue/vue.jpg" alt />
@@ -23,7 +20,8 @@
 </template>
 
 <script>
-export default {};
+export default {
+};
 </script>
 
 <style scoped>
@@ -44,7 +42,6 @@ export default {};
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-   
   }
   img {
     margin: 0 10px;
@@ -91,7 +88,7 @@ export default {};
 }
 
 @media screen and (min-width: 750px) {
- .footer {
+  .footer {
     color: #ffffff;
     height: 10vh;
     width: 100%;

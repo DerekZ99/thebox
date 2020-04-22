@@ -8,6 +8,7 @@
         </a>
       </h1>
       <div class="nav-bar-bg animated bounceInRight delay-1s">
+        <slot></slot>
         <home-nav-bar-item path="/myself">关于我</home-nav-bar-item>
         <home-nav-bar-item path="/work">关于本页</home-nav-bar-item>
         <home-nav-bar-item path="/collection">我的收藏</home-nav-bar-item>
@@ -27,14 +28,14 @@ export default {
   methods: {
     jumpToHome() {
       this.$router.push("/home");
-    }
+    },
   }
 };
 </script>
 
 <style scoped>
 .el-row {
-  background-color: #1e1e1e;
+  background-color: #1d1a1a;
 }
 .nav-bar-bg {
   display: flex;
@@ -50,4 +51,5 @@ export default {
   background-color: #1e1e1e;
   clear: both;
 }
+
 </style>

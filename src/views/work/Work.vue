@@ -1,7 +1,9 @@
 <template>
   <div class="work">
     <div class="content" :class="{fixHeight:isFixHeight}">
-      <home-nav-bar></home-nav-bar>
+      <home-nav-bar>
+        <music-switch></music-switch>
+      </home-nav-bar>
       <el-row class="row">
         <el-col :span="16" :offset="4">
           <p class="intro">
@@ -25,11 +27,13 @@
 <script>
 import HomeNavBar from "../home/childComps/HomeNavBar";
 import WorkFolder from "./childComps/WorkFolder";
+import MusicSwitch from "components/content/musicSwitch/MusicSwitch" 
 
 export default {
   components: {
     HomeNavBar,
-    WorkFolder
+    WorkFolder,
+    MusicSwitch
   },
   data() {
     return {
@@ -43,7 +47,14 @@ export default {
       } else {
         this.isFixHeight = false;
       }
+    },
+    getCurPath(path) {
+      this.$store.commit("changeCurPath", path);
     }
+  },
+  activated() {
+    const path = this.$route.path;
+    this.getCurPath(path);
   }
 };
 </script>

@@ -1,36 +1,27 @@
 <template>
-  <div :class="{home:!showAnimation}">
-    <starter-animation @BtnClicked="starterClick" v-if="showAnimation"></starter-animation>
-    <div v-else class="animated slideInUp">
-      <home-header-video></home-header-video>
-      <home-nav-bar></home-nav-bar>
-      <home-box-animation></home-box-animation>
-    </div>
+  <div class="animated slideInUp">
+    <home-nav-bar></home-nav-bar>
+    <home-box-animation></home-box-animation>
   </div>
 </template>
 
 <script>
-import HomeHeaderVideo from "./childComps/HomeHeaderVideo";
 import HomeNavBar from "./childComps/HomeNavBar";
 import HomeBoxAnimation from "./childComps/HomeBoxAnimation";
-import StarterAnimation from "components/content/starterAnimation/StarterAnimation";
 
 export default {
   components: {
-    HomeHeaderVideo,
     HomeNavBar,
-    HomeBoxAnimation,
-    StarterAnimation
+    HomeBoxAnimation
   },
   methods: {
-    starterClick() {
-      this.showAnimation = !this.showAnimation;
+    getCurPath(path) {
+      this.$store.commit("changeCurPath", path);
     }
   },
-  data() {
-    return {
-      showAnimation: true
-    };
+  activated() {
+    const path = this.$route.path;
+    this.getCurPath(path);
   }
 };
 </script>
@@ -38,7 +29,6 @@ export default {
 <style scoped>
 .home {
   overflow: hidden;
-  background:rgba(0, 0, 0, .8);
+  background: rgba(0, 0, 0, 0.8);
 }
-
 </style>

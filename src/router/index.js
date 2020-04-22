@@ -5,13 +5,18 @@ const Home = () => import("../views/home/home");
 const Myself = () => import("../views/myself/Myself")
 const Collection = () => import("../views/collection/Collection")
 const Work = () => import("../views/work/Work")
+const StarterAnimation = () => import("../views/starterAnimation/StarterAnimation")
 
 Vue.use(VueRouuter);
 
 const routes = [{
     //配置映射关系
     path: "/",
-    redirect: "/home",
+    redirect: "/starter",
+  },
+  {
+    path: "/starter",
+    component: StarterAnimation,
   },
   {
     path: "/home",

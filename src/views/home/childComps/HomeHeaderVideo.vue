@@ -10,8 +10,7 @@
     ></video>
     <!-- logo文字 -->
     <h1 class="title" @mouseenter="mouseOn" @mouseleave="mouseOn">
-      <div class="main-title"
-        :class="isShowCloseBox?'animated flash':''">the box</div>
+      <div class="main-title" :class="isShowCloseBox?'animated flash':''">the box</div>
       <!-- 关闭窗口 -->
       <transition
         enter-active-class="animated fadeInUp fast"
@@ -44,6 +43,17 @@ export default {
       isCloseVideo: true,
       isMuted: false
     };
+  },
+  created() {
+    let that = this;
+    this.$bus.$on("playMusic", val => {
+      that.isMuted = val;
+    });
+  },
+  watch:{
+    isMuted(){
+      this.$bus.$emit("playMusic", this.isMuted)
+    }
   },
   methods: {
     mouseOn() {

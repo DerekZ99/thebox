@@ -1,17 +1,24 @@
 <template>
   <div id="app">
+    <div v-if="$store.state.isHideVideo">
+      <home-header-video v-show="$store.state.isShowVideo"></home-header-video>
+    </div>
+
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
+
     <Footer></Footer>
   </div>
 </template>
 
 <script>
 import Footer from "components/common/footer/Footer";
+import HomeHeaderVideo from "./views/home/childComps/HomeHeaderVideo";
 export default {
   name: "App",
   components: {
+    HomeHeaderVideo,
     Footer
   }
 };

@@ -28,7 +28,7 @@ export default {
   components: {
     HomeNavBar,
     Music,
-    CollectionList
+    CollectionList,
   },
   data() {
     return {
@@ -63,7 +63,14 @@ export default {
   methods: {
     hiddenMask() {
       this.isShowMask = !this.isShowMask;
+    },
+    getCurPath(path) {
+      this.$store.commit("changeCurPath", path);
     }
+  },
+  activated() {
+    const path = this.$route.path;
+    this.getCurPath(path);
   }
 };
 </script>

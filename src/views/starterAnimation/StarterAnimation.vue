@@ -13,10 +13,17 @@
 
 <script>
 export default {
-  methods:{
-    BtnClick(){
-      this.$emit('BtnClicked')
+  methods: {
+    BtnClick() {
+      this.$router.push("/home");
+    },
+    getCurPath(path) {
+      this.$store.commit("changeCurPath", path)    
     }
+  },
+  mounted() {
+    const path = this.$route.path;
+    this.getCurPath(path);   
   }
 };
 </script>
@@ -57,7 +64,7 @@ export default {
 .clickBtn {
   position: absolute;
   padding: 10px 30px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   color: #fff;
   font-size: 20px;
   font-family: navbar;
@@ -65,7 +72,7 @@ export default {
   left: 50%;
   transform: translateX(-50%);
 }
-.clickBtn:hover{
+.clickBtn:hover {
   cursor: pointer;
 }
 .clickBtn::before {
@@ -75,7 +82,7 @@ export default {
   left: 50%;
   height: 57px;
   width: 145px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   transform: translate(-50%, -50%);
 }
 </style>
