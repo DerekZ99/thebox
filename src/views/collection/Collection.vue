@@ -1,20 +1,22 @@
 <template>
-  <div class="collection animated bounceInUp">
-    <div class="content">
-      <home-nav-bar v-if="$store.state.isShowFooter"></home-nav-bar>
-      <el-row class="row">
-        <el-col :span="20" :offset="2">
-          <p class="intro">
-            Hi!欢迎来到我的收藏页面。我喜欢说唱音乐，下面有我喜欢的图片与音乐。你可以在听歌的同时来浏览下方的图片。点击图片可以放大他们哦
-            Enjoy it :)
-          </p>
-          <Music class="music"></Music>
-          <collection-list :imgSrc="imgSrc" ref="collectionList"></collection-list>
-        </el-col>
-        <div class="mask animated fadeIn faster" v-show="isShowMask" @click="hiddenMask">
-          <img :src="imgSrc[clickIndex]" alt />
-        </div>
-      </el-row>
+  <div>
+    <div class="collection animated bounceInUp">
+      <div class="content">
+        <home-nav-bar v-if="$store.state.isShowFooter"></home-nav-bar>
+        <el-row class="row">
+          <el-col :span="20" :offset="2">
+            <p class="intro">
+              Hi!欢迎来到我的收藏页面。我喜欢说唱音乐，下面有我喜欢的图片与音乐。你可以在听歌的同时来浏览下方的图片。点击图片可以放大他们哦
+              Enjoy it :)
+            </p>
+            <Music class="music"></Music>
+            <collection-list :imgSrc="imgSrc" ref="collectionList"></collection-list>
+          </el-col>
+        </el-row>
+      </div>
+    </div>
+    <div class="mask animated fadeIn faster" v-show="isShowMask" @click.stop="hiddenMask">
+      <img :src="imgSrc[clickIndex]" alt />
     </div>
   </div>
 </template>
@@ -80,10 +82,11 @@ export default {
   background-size: cover;
   background-attachment: fixed;
   height: 100%;
-  margin-bottom: 10vh;
+  margin-bottom: 9vh;
 }
 .content {
   background: rgba(0, 0, 0, 0.5);
+  padding-bottom: 1.25rem;
 }
 
 .intro {
@@ -92,15 +95,27 @@ export default {
   color: #ffffff;
 }
 .mask {
-  position: absolute;
-  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 100%;
+  z-index: 90;
 }
 .mask img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 479px) {
+  .mask img {
+    width: 90%;
+  }
+  .collection{
+     margin-bottom: 7vh;
+  }
 }
 </style>

@@ -48,4 +48,9 @@ export default {};
 .bigimg {
   width: 100%;
 }
+@media screen and (max-width: 479px) {
+  img {
+    width: 100%;
+  }
+}
 </style>

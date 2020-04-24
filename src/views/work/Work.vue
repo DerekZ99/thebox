@@ -5,7 +5,7 @@
         <music-switch></music-switch>
       </home-nav-bar>
       <el-row class="row">
-        <el-col :span="16" :offset="4">
+        <el-col :span="$store.state.isShowFooter ?16:20 " :offset="$store.state.isShowFooter ?4:2 ">
           <p class="intro">
             Hi!欢迎你来到本站的制作。我将会在这里分享一些自己在制作这个网站时遇到的坑，以及一些小技巧。虽然说基本上都是基础操作。但是这也算是我成长的印记。当然，我也十分希望可以得到你宝贵的意见。
             :)
@@ -27,13 +27,13 @@
 <script>
 import HomeNavBar from "../home/childComps/HomeNavBar";
 import WorkFolder from "./childComps/WorkFolder";
-import MusicSwitch from "components/content/musicSwitch/MusicSwitch" 
+import MusicSwitch from "components/content/musicSwitch/MusicSwitch";
 
 export default {
   components: {
     HomeNavBar,
     WorkFolder,
-    MusicSwitch, 
+    MusicSwitch
   },
   data() {
     return {

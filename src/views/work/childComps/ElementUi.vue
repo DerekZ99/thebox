@@ -34,7 +34,11 @@ export default {};
 .intro p {
   margin: 10px 0;
 }
-
+@media screen and (max-width: 479px) {
+  img {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 1280px) {
   .bigimg {
     width: 100%;

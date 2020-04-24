@@ -19,7 +19,7 @@ export default {
   methods: {
     itemClick(src) {
       // 发送事件到事件总站，另一头是collection在接
-      this.$bus.$emit("itemClicked", src);
+      this.$bus.$emit("itemClicked", src);     
     }
   }
 };

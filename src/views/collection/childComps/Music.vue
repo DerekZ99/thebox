@@ -4,15 +4,20 @@
       @click="prevClick()"
       class="songBtn"
       :class="audioIndex == 0 ? 'animated rollOut' : 'animated rollIn'"
-      >上一首</span
-    >
-    <audio :src="audioUrl[audioIndex]" controls></audio>
-    <span
+    >上一首</span>
+     <span
+      v-if="!$store.state.isShowFooter"
       @click="nextClick()"
       class="songBtn"
       :class="audioIndex == 2 ? 'animated rollOut' : 'animated rollIn'"
-      >下一首</span
-    >
+    >下一首</span>
+    <audio :src="audioUrl[audioIndex]" controls></audio>
+    <span
+       v-if="$store.state.isShowFooter"
+      @click="nextClick()"
+      class="songBtn"
+      :class="audioIndex == 2 ? 'animated rollOut' : 'animated rollIn'"
+    >下一首</span>
   </div>
 </template>
 

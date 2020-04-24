@@ -32,6 +32,7 @@
       </el-collapse-item>
     </el-collapse>
     <work-list
+    v-if="$store.state.isShowFooter"
     v-show="activeNames"
       :class="activeNames?'animated bounceIn':''"
       @listItemClick="listItemClicked"
@@ -92,4 +93,8 @@ export default {
 .workFolder .el-collapse-item__wrap {
   background-color: #fff7dd;
 }
+.workFolder{
+   margin-bottom: 7vh;
+ }
+
 </style>

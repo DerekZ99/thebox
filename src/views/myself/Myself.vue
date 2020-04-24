@@ -1,15 +1,17 @@
 <template>
-  <div class="myself animated bounceInUp">
-    <home-nav-bar v-if="$store.state.isShowFooter">
-      <music-switch></music-switch>
-    </home-nav-bar>
-    <el-row class="row">
-      <el-col :span="16" :offset="4">
-        <p class="intro">Hi,我们又见面了，那接下来我就来介绍一下我自己。</p>
-        <Canada @imgClicked="imgClick"></Canada>
-        <Skill></Skill>
-      </el-col>
-    </el-row>
+  <div>
+    <div class="myself animated bounceInUp">
+      <home-nav-bar v-if="$store.state.isShowFooter">
+        <music-switch></music-switch>
+      </home-nav-bar>
+      <el-row class="row">
+        <el-col :span="$store.state.isShowFooter ?16:20 " :offset="$store.state.isShowFooter ?4:2 ">
+          <p class="intro">Hi,我们又见面了，那接下来我就来介绍一下我自己。</p>
+          <Canada @imgClicked="imgClick"></Canada>
+          <Skill></Skill>
+        </el-col>
+      </el-row>
+    </div>
     <div v-show="isShowMask" @click="showMask" class="mask">
       <img class="maskImg" :src="imgItem.img" :title="imgItem.title" />
     </div>
@@ -56,7 +58,7 @@ export default {
 
 <style scoped>
 .myself {
-  margin-bottom: 10vh;
+  margin-bottom: 9vh;
   background: url("~assets/boxImg/otherBg.jpg") no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -71,19 +73,39 @@ export default {
   font-size: 0.875rem;
 }
 .mask {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 10;
 }
 .maskImg {
   position: fixed;
-  top: 5%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  height: 80vh;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 479px) {
+  .maskImg {
+    width: 90%;
+  }
+  .myself{
+    margin-bottom: 6vh;
+  }
+}
+@media screen and (min-width: 480px) {
+  @media screen and (max-width: 768px) {
+    .maskImg {
+      height: 80vh;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .maskImg {
+    height: 80vh;
+  }
 }
 </style>
