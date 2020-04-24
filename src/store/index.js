@@ -7,9 +7,12 @@ export default new Vuex.Store({
   state: {
     isShowVideo: false,
     isHideVideo: true,
+    isShowFooter: false,
+    curPath:''
   },
   mutations: {
     changeCurPath(state, path) {
+      state.curPath = path
       if (path === "/home") {
         state.isShowVideo = true
       } else {
@@ -19,6 +22,13 @@ export default new Vuex.Store({
         state.isHideVideo = false
       } else {
         state.isHideVideo = true
+      }
+    },
+    showFooter(state, val) {
+      if (val <= 479) {
+        state.isShowFooter = false
+      } else {
+        state.isShowFooter = true
       }
     }
   },

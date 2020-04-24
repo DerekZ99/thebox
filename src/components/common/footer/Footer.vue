@@ -20,100 +20,10 @@
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>
 
 <style scoped>
-@media screen and (max-width: 480px) {
-  .footer {
-    color: #ffffff;
-    height: 10vh;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    background-color: #1e1e1e;
-    padding: 5px 0 0;
-    font-size: 10px;
-    box-sizing: border-box;
-  }
-  .logo-img {
-    display: inline-block;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  img {
-    margin: 0 10px;
-    height: 35px;
-  }
-  .text {
-    line-height: 35px;
-  }
-  .text::after {
-    content: "作者：Derek";
-    margin-left: 5px;
-  }
-}
-
-@media screen and (max-width: 749px) {
-  .footer {
-    color: #ffffff;
-    height: 10vh;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    background-color: #1e1e1e;
-    padding: 10px 0;
-    box-sizing: border-box;
-  }
-  .logo-img {
-    display: inline-block;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  img {
-    margin: 0 10px;
-    height: 35px;
-  }
-  .text {
-    display: block;
-    line-height: 35px;
-  }
-  .text::after {
-    content: "作者：Derek";
-    margin-left: 30px;
-  }
-}
-
-@media screen and (min-width: 750px) {
-  .footer {
-    color: #ffffff;
-    height: 10vh;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    background-color: #1e1e1e;
-    padding: 20px 0;
-    box-sizing: border-box;
-  }
-  .logo-img {
-    float: right;
-  }
-  img {
-    margin: 0 10px;
-    height: 35px;
-  }
-  .text {
-    line-height: 35px;
-  }
-  .text::after {
-    content: "作者：Derek";
-    margin-left: 30px;
-  }
-}
-/* 
 .footer {
   color: #ffffff;
   height: 10vh;
@@ -121,12 +31,10 @@ export default {
   position: fixed;
   bottom: 0;
   background-color: #1e1e1e;
-  padding: 20px 0;
+
   box-sizing: border-box;
 }
-.logo-img {
-  float: right;
-}
+
 img {
   margin: 0 10px;
   height: 35px;
@@ -136,6 +44,46 @@ img {
 }
 .text::after {
   content: "作者：Derek";
-  margin-left: 30px;
-} */
+}
+@media screen and (max-width: 479px) {
+  .footer {
+    font-size: 0.625rem;
+  }
+  .text::after {
+    margin-left: 10px;
+  }
+  .logo-img {
+    display: inline-block;
+    position: relative;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (min-width: 480px) {
+  @media screen and (max-width: 768px) {
+    .footer {
+      font-size: 1rem;
+      padding: 20px 0;
+    }
+    .text::after {
+      margin-left: 10px;
+    }
+    .logo-img {
+      float: right;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .footer {
+    padding: 20px 0;
+  }
+  .text::after {
+    margin-left: 30px;
+  }
+  .logo-img {
+    float: right;
+  }
+}
 </style>

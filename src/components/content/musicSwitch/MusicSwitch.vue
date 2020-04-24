@@ -22,7 +22,7 @@ export default {
       this.$bus.$emit("playMusic", this.isPlayMusic);
     }
   },
-  created() {
+  mounted() {
     let that = this;
     this.$bus.$on("playMusic", val => {
       that.isPlayMusic = val;
@@ -40,4 +40,10 @@ export default {
 .switchText {
   margin-right: 5px;
 }
+@media screen and (max-width: 479px) {
+ .switchText {
+  font-size: .75rem;
+}
+}
+
 </style>

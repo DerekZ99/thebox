@@ -36,6 +36,7 @@ export default {
 <style scoped>
 .el-row {
   background-color: #1d1a1a;
+  overflow: hidden;
 }
 .nav-bar-bg {
   display: flex;

@@ -1,7 +1,7 @@
 <template>
   <div class="collection animated bounceInUp">
     <div class="content">
-      <home-nav-bar></home-nav-bar>
+      <home-nav-bar v-if="$store.state.isShowFooter"></home-nav-bar>
       <el-row class="row">
         <el-col :span="20" :offset="2">
           <p class="intro">
@@ -23,12 +23,11 @@
 import HomeNavBar from "../home/childComps/HomeNavBar";
 import Music from "./childComps/Music";
 import CollectionList from "components/content/collection/CollectionList";
-
 export default {
   components: {
     HomeNavBar,
     Music,
-    CollectionList,
+    CollectionList
   },
   data() {
     return {

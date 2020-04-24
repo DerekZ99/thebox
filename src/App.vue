@@ -1,30 +1,63 @@
 <template>
   <div id="app">
+    <tab-title v-if="!$store.state.isShowFooter && isShowTab"></tab-title>
     <div v-if="$store.state.isHideVideo">
-      <home-header-video v-show="$store.state.isShowVideo"></home-header-video>
+      <home-header-video class="test" v-show="$store.state.isShowVideo"></home-header-video>
     </div>
-
     <keep-alive>
-      <router-view></router-view>
+      <router-view :class="{test:isShowTab}"></router-view>
     </keep-alive>
 
-    <Footer></Footer>
+    <Footer v-if="$store.state.isShowFooter || $store.state.curPath == '/starter'"></Footer>
+    <main-tab-bar v-else></main-tab-bar>
   </div>
 </template>
 
 <script>
 import Footer from "components/common/footer/Footer";
 import HomeHeaderVideo from "./views/home/childComps/HomeHeaderVideo";
+import MainTabBar from "components/common/MainTabBar/MainTabBar";
+import TabTitle from "components/common/tabTitle/TabTitle";
 export default {
   name: "App",
   components: {
     HomeHeaderVideo,
-    Footer
+    Footer,
+    MainTabBar,
+    TabTitle
+  },
+  data() {
+    return {
+      isShowTab: false
+    };
+  },
+  created() {
+    this.getWinWidth();
+  },
+  mounted() {
+    let that = this;
+    this.$bus.$on("enterClick", () => { //由starter发过来
+      that.isShowTab = !that.isShowTab;
+    });
+    window.onresize = () => {
+      return (() => {
+        this.getWinWidth();
+      })();
+    };
+  },
+  methods: {
+    getWinWidth() {
+      this.$store.commit("showFooter", document.body.clientWidth);
+    }
   }
 };
 </script>
-
 <style>
+@media screen and (max-width: 479px) {
+  .test {
+    margin-top: 40px;
+  }
+}
 #app {
   background: #333438;
 }

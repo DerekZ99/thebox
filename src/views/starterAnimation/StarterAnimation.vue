@@ -1,6 +1,5 @@
 <template>
   <div class="starter">
-    <img class="animated fadeIn slower" src="~assets/rapImg/robby.jpg" alt />
     <div class="title">
       <div class="main-title animated fadeIn slower delay-2s">
         the box
@@ -16,14 +15,15 @@ export default {
   methods: {
     BtnClick() {
       this.$router.push("/home");
+      this.$bus.$emit('enterClick') //发送点击事件给app.vue
     },
     getCurPath(path) {
-      this.$store.commit("changeCurPath", path)    
+      this.$store.commit("changeCurPath", path);
     }
   },
   mounted() {
     const path = this.$route.path;
-    this.getCurPath(path);   
+    this.getCurPath(path);
   }
 };
 </script>
@@ -31,11 +31,9 @@ export default {
 <style scoped>
 .starter {
   height: 90vh;
-}
-.starter img {
-  position: absolute;
-  width: 100%;
-  height: 90%;
+  background: url("~assets/rapImg/robby.jpg") no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
 }
 .title {
   position: relative;
@@ -84,5 +82,13 @@ export default {
   width: 145px;
   border: 1px solid #ffffff;
   transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 479px) {
+  .main-title {
+    font-size: 5.3125rem;
+  }
+  .second-title {
+    font-size: 2.1875rem;
+  }
 }
 </style>

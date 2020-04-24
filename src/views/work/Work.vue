@@ -1,7 +1,7 @@
 <template>
   <div class="work">
     <div class="content" :class="{fixHeight:isFixHeight}">
-      <home-nav-bar>
+      <home-nav-bar v-if="$store.state.isShowFooter">
         <music-switch></music-switch>
       </home-nav-bar>
       <el-row class="row">
@@ -33,7 +33,7 @@ export default {
   components: {
     HomeNavBar,
     WorkFolder,
-    MusicSwitch
+    MusicSwitch, 
   },
   data() {
     return {
@@ -66,7 +66,7 @@ export default {
 
   background-size: cover;
   background-attachment: fixed;
-  height: 90vh;
+  height: 95vh;
 }
 .content {
   background: rgba(0, 0, 0, 0.5);

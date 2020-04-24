@@ -1,6 +1,6 @@
 <template>
   <div class="myself animated bounceInUp">
-    <home-nav-bar>
+    <home-nav-bar v-if="$store.state.isShowFooter">
       <music-switch></music-switch>
     </home-nav-bar>
     <el-row class="row">
@@ -20,7 +20,7 @@
 import HomeNavBar from "../home/childComps/HomeNavBar";
 import Canada from "./childComps/Canada";
 import Skill from "./childComps/Skill";
-import MusicSwitch from "components/content/musicSwitch/MusicSwitch"
+import MusicSwitch from "components/content/musicSwitch/MusicSwitch";
 
 export default {
   components: {
@@ -32,14 +32,12 @@ export default {
   data() {
     return {
       imgItem: "",
-      isShowMask: false,
-      
+      isShowMask: false
     };
   },
   methods: {
     imgClick(item) {
       this.imgItem = item;
-      console.log(this.imgItem);
       this.isShowMask = !this.isShowMask;
     },
     showMask() {
@@ -62,6 +60,7 @@ export default {
   background: url("~assets/boxImg/otherBg.jpg") no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  overflow: auto;
 }
 .row {
   background: rgba(0, 0, 0, 0.5);
@@ -69,7 +68,7 @@ export default {
 .intro {
   margin: 20px 0;
   color: aliceblue;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .mask {
   position: absolute;
@@ -87,5 +86,4 @@ export default {
   transform: translateX(-50%);
   height: 80vh;
 }
-
 </style>
