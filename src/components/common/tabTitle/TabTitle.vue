@@ -39,6 +39,7 @@ export default {
   position: fixed;
   align-items: center;
   top: 0;
+  z-index: 99;
 }
 .title-item{
   flex: 1;
