@@ -1,6 +1,11 @@
 <template>
   <div class="workFolder">
-    <el-collapse ref="collapse" v-model="activeNames" @change="handleChange" accordion>
+    <el-collapse
+      ref="collapse"
+      v-model="activeNames"
+      @change="handleChange"
+      accordion
+    >
       <!-- generalInfo内容 -->
       <el-collapse-item title="开始工作" name="1">
         <div class="folder">
@@ -32,9 +37,9 @@
       </el-collapse-item>
     </el-collapse>
     <work-list
-    v-if="$store.state.isShowFooter"
-    v-show="activeNames"
-      :class="activeNames?'animated bounceIn':''"
+      v-if="$store.state.isShowFooter"
+      v-show="activeNames"
+      :class="activeNames ? 'animated bounceIn' : ''"
       @listItemClick="listItemClicked"
       :title="item"
     ></work-list>
@@ -57,12 +62,13 @@ export default {
     HeaderVideo,
     AnimatedCss,
     ElementUi,
-    WorkList
+    WorkList,
   },
   data() {
     return {
       activeNames: "",
-      item: null
+      item: null,
+      itemOffsetTop: 0,
     };
   },
   mounted() {
@@ -72,11 +78,15 @@ export default {
     handleChange(val) {
       const activeNum = this.activeNames;
       this.$emit("folderClose", activeNum);
+      if (!val) return; //防止报错
+      setTimeout(() => {
+        this.$emit("getOffset", this.item[val - 1].$el.offsetTop);
+      },400);
     },
     listItemClicked(activeNum) {
       this.activeNames = activeNum;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -93,8 +103,7 @@ export default {
 .workFolder .el-collapse-item__wrap {
   background-color: #fff7dd;
 }
-.workFolder{
-   margin-bottom: 7vh;
- }
-
+.workFolder {
+  margin-bottom: 7vh;
+}
 </style>
