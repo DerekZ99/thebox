@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="mask animated fadeIn faster" v-show="isShowMask" @click.stop="hiddenMask">
-      <img :src="imgSrc[clickIndex]" alt />
+      <img v-lazy="imgSrc[clickIndex]" alt />
     </div>
   </div>
 </template>
@@ -67,11 +67,15 @@ export default {
     },
     getCurPath(path) {
       this.$store.commit("changeCurPath", path);
+    },
+     toTop() {
+      document.documentElement.scrollTop = document.body.scrollTop = 0;
     }
   },
   activated() {
     const path = this.$route.path;
     this.getCurPath(path);
+    this.toTop()
   }
 };
 </script>

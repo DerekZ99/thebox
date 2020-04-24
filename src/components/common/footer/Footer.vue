@@ -7,10 +7,10 @@
 
           <span class="logo-img">
             <a href="https://cloud.tencent.com/developer/doc/1270">
-              <img src="https://main.qcloudimg.com/raw/c1e4f4dbc9f8d54cbbdb94da8a38d6f9.svg" alt />
+              <img v-lazy="`https://main.qcloudimg.com/raw/c1e4f4dbc9f8d54cbbdb94da8a38d6f9.svg`" alt />
             </a>
             <a href="https://cn.vuejs.org/">
-              <img src="~assets/vue/vue.jpg" alt />
+              <img v-lazy="require('../../../assets/vue/vue.jpg')" alt />
             </a>
           </span>
         </div>

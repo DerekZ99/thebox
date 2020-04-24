@@ -14,7 +14,7 @@
         <el-carousel v-if="isShowSwiper" :interval="8000">
           <el-carousel-item class="swiper" v-for="item in canadaImg" :key="item.id">
             <h3>{{ item.title }}</h3>
-            <img :src="item.img" class="image" alt @click="imgClick(item)" />
+            <img v-lazy="item.img" class="image" alt @click="imgClick(item)" />
           </el-carousel-item>
         </el-carousel>
         <!-- 轮播图↑ -->
@@ -25,7 +25,7 @@
     <el-carousel v-else :interval="8000" arrow="always">
       <el-carousel-item class="swiper" v-for="item in canadaImg" :key="item.id">
         <h3>{{ item.title }}</h3>
-        <img :src="item.img" class="image" alt @click="imgClick(item)" />
+        <img v-lazy="item.img" class="image" alt @click="imgClick(item)" />
       </el-carousel-item>
     </el-carousel>
     <!-- 轮播图↑ -->

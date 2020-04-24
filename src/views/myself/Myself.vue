@@ -47,11 +47,15 @@ export default {
     },
     getCurPath(path) {
       this.$store.commit("changeCurPath", path);
+    },
+    toTop() {
+      document.documentElement.scrollTop = document.body.scrollTop = 0;
     }
   },
   activated() {
     const path = this.$route.path;
     this.getCurPath(path);
+    this.toTop();
   }
 };
 </script>
@@ -91,7 +95,7 @@ export default {
   .maskImg {
     width: 90%;
   }
-  .myself{
+  .myself {
     margin-bottom: 6vh;
   }
 }
