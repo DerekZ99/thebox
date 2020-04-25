@@ -35,11 +35,15 @@ export default {
   background-position: 50% 50%;
   margin-top: 0;
   height: 60vh;
-  line-height: 1.5625rem;
 }
 .content {
   background: rgba(0, 0, 0, 0.7);
   height: 100%;
   overflow: auto;
+}
+@media screen and (max-width: 479px) {
+  .home {
+    line-height: 1.5625rem;
+  }
 }
 </style>

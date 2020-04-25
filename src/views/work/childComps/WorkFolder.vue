@@ -1,11 +1,6 @@
 <template>
   <div class="workFolder">
-    <el-collapse
-      ref="collapse"
-      v-model="activeNames"
-      @change="handleChange"
-      accordion
-    >
+    <el-collapse ref="collapse" v-model="activeNames" @change="handleChange" accordion>
       <!-- generalInfo内容 -->
       <el-collapse-item title="开始工作" name="1">
         <div class="folder">
@@ -62,13 +57,13 @@ export default {
     HeaderVideo,
     AnimatedCss,
     ElementUi,
-    WorkList,
+    WorkList
   },
   data() {
     return {
       activeNames: "",
       item: null,
-      itemOffsetTop: 0,
+      itemOffsetTop: 0
     };
   },
   mounted() {
@@ -76,21 +71,23 @@ export default {
   },
   methods: {
     handleChange(val) {
+      let that = this;
       const activeNum = this.activeNames;
       this.$emit("folderClose", activeNum);
       if (!val) return; //防止报错
-      setTimeout(() => { //页面滚动到标题位置
-        this.$emit("getOffset", this.item[val - 1].$el.offsetTop);
-      },400);
+      setTimeout(() => {
+        that.$emit("getOffset", that.item[val - 1].$el.offsetTop);
+      }, 500);
     },
     listItemClicked(activeNum) {
+      let that = this;
       this.activeNames = activeNum;
-      setTimeout(() => { //页面滚动到标题位置
-        this.$emit("getOffset", this.item[activeNum-1].$el.offsetTop);
-      },400);
-      
-    },
-  },
+      //页面滚动到标题位置
+      setTimeout(() => {
+        that.$emit("getOffset", that.item[activeNum - 1].$el.offsetTop);
+      }, 500);
+    }
+  }
 };
 </script>
 

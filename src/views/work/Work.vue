@@ -20,10 +20,7 @@
             对自己还是满意的。这里还大量的用了Animated.css这个神奇的插件。Ok，接下来，我会利用折叠面板的方式把内容呈现在里面，虽然这样对与阅读的连贯性不太好，但是整体看上去会比较干净。如果你下次再想来查看一些内容时，寻找起来比较方便
           </p>
           <!-- 折叠板 -->
-          <work-folder
-            @getOffset="getOffsetTop"
-            @folderClose="fixHeight"
-          ></work-folder>
+          <work-folder @getOffset="getOffsetTop" @folderClose="fixHeight"></work-folder>
         </el-col>
       </el-row>
     </div>
@@ -39,11 +36,11 @@ export default {
   components: {
     HomeNavBar,
     WorkFolder,
-    MusicSwitch,
+    MusicSwitch
   },
   data() {
     return {
-      isFixHeight: true,
+      isFixHeight: true
     };
   },
   methods: {
@@ -59,31 +56,34 @@ export default {
     },
     getOffsetTop(val) {
       this.$refs.work.scrollTo(0, val);
-    },
+    }
   },
   activated() {
     const path = this.$route.path;
     this.getCurPath(path);
-  },
+  }
 };
 </script>
 
 <style scoped>
 .work {
   overflow: auto;
- background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   background-size: cover;
   height: 90vh;
-  line-height: 1.5625rem
 }
 
 .intro {
   margin: 20px 0;
   font-size: 14px;
   color: #ffffff;
-  
 }
 .fixHeight {
   height: 100%;
+}
+@media screen and (max-width: 479px) {
+  .work {
+    line-height: 1.5625rem;
+  }
 }
 </style>

@@ -88,6 +88,9 @@ export default {
   transform: translate(-50%, -50%);
 }
 @media screen and (max-width: 479px) {
+  .myself {
+  line-height: 1.5625rem;
+}
   .maskImg {
     width: 90%;
   }
