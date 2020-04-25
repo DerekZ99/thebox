@@ -62,7 +62,7 @@ export default {
 
 <style scoped>
 .myself {
-
+  line-height: 1.5625rem;
   background: rgba(0, 0, 0, 0.5);
   overflow: auto;
   height: 90vh;

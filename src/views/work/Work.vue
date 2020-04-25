@@ -74,7 +74,7 @@ export default {
  background: rgba(0, 0, 0, 0.5);
   background-size: cover;
   height: 90vh;
-
+  line-height: 1.5625rem
 }
 
 .intro {

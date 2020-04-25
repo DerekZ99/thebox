@@ -96,6 +96,10 @@ export default {
   font-size: 1rem;
 }
 @media screen and (max-width: 479px) {
+  .myInfo{
+     margin-top: 1rem;
+     height: 30vh;
+  }
   .infoItem {
     flex-direction: column;
   }
@@ -104,12 +108,18 @@ export default {
     height: 4rem;
   }
   .innerDetail {
-    height: 8rem;
-    width: 8rem;
+    height: 7rem;
+    width: 7rem;
   }
   .itemDetail h5 {
     font-size: 0.875rem;
   }
+  .itemDetail img {
+  border-radius: 50%;
+  width: 3.125rem;
+  height: 3.125rem;
+  margin-bottom: .3125rem;
+}
 }
 @media screen and (min-width: 480px) {
   @media screen and (max-width: 767px) {

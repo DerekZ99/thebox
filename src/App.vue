@@ -36,7 +36,8 @@ export default {
   },
   mounted() {
     let that = this;
-    this.$bus.$on("enterClick", () => { //由starter发过来
+    this.$bus.$on("enterClick", () => {
+      //由starter发过来
       that.isShowTab = !that.isShowTab;
     });
     window.onresize = () => {

@@ -35,6 +35,7 @@ export default {
   background-position: 50% 50%;
   margin-top: 0;
   height: 60vh;
+  line-height: 1.5625rem;
 }
 .content {
   background: rgba(0, 0, 0, 0.7);

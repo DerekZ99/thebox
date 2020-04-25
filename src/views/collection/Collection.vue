@@ -93,6 +93,7 @@ export default {
   margin: 20px 0;
   font-size: 14px;
   color: #ffffff;
+  line-height: 1.5625rem;
 }
 .mask {
   position: fixed;
