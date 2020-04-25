@@ -28,8 +28,8 @@ export default {};
   color: #ffffff;
   height: 10vh;
   width: 100%;
-  position: fixed;
-  bottom: 0;
+  /* position: relative;
+  bottom: 0; */
   background-color: #1e1e1e;
 
   box-sizing: border-box;

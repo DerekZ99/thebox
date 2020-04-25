@@ -40,9 +40,10 @@ export default {
 <style scoped>
 .row {
   background: rgba(0, 0, 0, 0.8);
+  height: 100%;
 }
 .animation-area {
-  height: 60vh;
+  height: 55vh;
 }
 .intro {
   color: #ffffff;
@@ -58,5 +59,10 @@ export default {
   background: url("~assets/boxImg/box1.jpg") no-repeat;
   background-size:cover;
   background-position: 50% 50%;
+}
+@media screen and (max-width: 479px) {
+  .animation-area {
+  height: 57vh;
+}
 }
 </style>

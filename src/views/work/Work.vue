@@ -75,7 +75,7 @@ export default {
 
   background-size: cover;
   background-attachment: fixed;
-  height: 95vh;
+  height: 90vh;
 }
 .content {
   background: rgba(0, 0, 0, 0.5);

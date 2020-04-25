@@ -2,10 +2,10 @@
   <div id="app">
     <tab-title v-if="!$store.state.isShowFooter && isShowTab"></tab-title>
     <div v-if="$store.state.isHideVideo">
-      <home-header-video class="test" v-show="$store.state.isShowVideo"></home-header-video>
+      <home-header-video class="pushDown" v-show="$store.state.isShowVideo"></home-header-video>
     </div>
     <keep-alive>
-      <router-view :class="{test:isShowTab}"></router-view>
+      <router-view :class="{pushDown:isShowTab}"></router-view>
     </keep-alive>
 
     <Footer v-if="$store.state.isShowFooter || $store.state.curPath == '/starter'"></Footer>
@@ -54,7 +54,7 @@ export default {
 </script>
 <style>
 @media screen and (max-width: 479px) {
-  .test {
+  .pushDown {
     margin-top: 40px;
   }
 }

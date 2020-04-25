@@ -62,7 +62,7 @@ export default {
 
 <style scoped>
 .myself {
-  margin-bottom: 9vh;
+
   background: url("~assets/boxImg/otherBg.jpg") no-repeat;
   background-attachment: fixed;
   background-size: cover;

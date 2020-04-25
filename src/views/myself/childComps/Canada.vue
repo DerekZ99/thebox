@@ -11,7 +11,7 @@
     >
       <el-collapse-item title="这里有在加拿大拍的照片，点击下方图片可以放大。点击此处可以隐藏图片" name="1">
         <!-- 轮播图 -->
-        <el-carousel v-if="isShowSwiper" :interval="8000">
+        <el-carousel v-show="isShowSwiper" :interval="8000">
           <el-carousel-item class="swiper" v-for="item in canadaImg" :key="item.id">
             <h3>{{ item.title }}</h3>
             <img v-lazy="item.img" class="image" alt @click="imgClick(item)" />

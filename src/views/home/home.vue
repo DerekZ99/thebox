@@ -31,5 +31,6 @@ export default {
   overflow: hidden;
   background: rgba(0, 0, 0, 0.8);
   margin-top: 0;
+  height: 60vh;
 }
 </style>

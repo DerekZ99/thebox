@@ -86,7 +86,7 @@ export default {
   background-size: cover;
   background-attachment: fixed;
   height: 100%;
-  margin-bottom: 9vh;
+  /* margin-bottom: 9vh; */
 }
 .content {
   background: rgba(0, 0, 0, 0.5);
