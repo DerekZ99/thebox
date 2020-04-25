@@ -74,12 +74,14 @@ export default {
  background: rgba(0, 0, 0, 0.5);
   background-size: cover;
   height: 90vh;
+
 }
 
 .intro {
   margin: 20px 0;
   font-size: 14px;
   color: #ffffff;
+  
 }
 .fixHeight {
   height: 100%;

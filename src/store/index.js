@@ -8,6 +8,7 @@ export default new Vuex.Store({
     isShowVideo: false,
     isHideVideo: true,
     isShowFooter: false,
+    isIpadSize:false,
     curPath:''
   },
   mutations: {
@@ -30,6 +31,10 @@ export default new Vuex.Store({
       } else {
         state.isShowFooter = true
       }
+      if (val <= 769 && val >480) {
+        state.isIpadSize = true
+      } else
+        state.isIpadSize = false
     }
   },
   actions: {},

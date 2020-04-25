@@ -79,12 +79,16 @@ export default {
       const activeNum = this.activeNames;
       this.$emit("folderClose", activeNum);
       if (!val) return; //防止报错
-      setTimeout(() => {
+      setTimeout(() => { //页面滚动到标题位置
         this.$emit("getOffset", this.item[val - 1].$el.offsetTop);
       },400);
     },
     listItemClicked(activeNum) {
       this.activeNames = activeNum;
+      setTimeout(() => { //页面滚动到标题位置
+        this.$emit("getOffset", this.item[activeNum-1].$el.offsetTop);
+      },400);
+      
     },
   },
 };

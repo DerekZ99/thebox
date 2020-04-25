@@ -1,7 +1,7 @@
 <template>
   <div >
     <div class="myself animated bounceInUp">
-      <home-nav-bar v-if="$store.state.isShowFooter">
+      <home-nav-bar class="fixTab" v-if="$store.state.isShowFooter">
         <music-switch></music-switch>
       </home-nav-bar>
       <el-row class="row">
@@ -102,6 +102,7 @@ export default {
     }
   }
 }
+
 
 @media screen and (min-width: 769px) {
   .maskImg {
