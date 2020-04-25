@@ -71,16 +71,11 @@ export default {
 <style scoped>
 .work {
   overflow: auto;
-  background: url("~assets/boxImg/otherBg.jpg") no-repeat;
-
+ background: rgba(0, 0, 0, 0.5);
   background-size: cover;
-  background-attachment: fixed;
   height: 90vh;
 }
-.content {
-  background: rgba(0, 0, 0, 0.5);
-  background-size: cover;
-}
+
 .intro {
   margin: 20px 0;
   font-size: 14px;

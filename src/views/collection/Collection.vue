@@ -68,28 +68,24 @@ export default {
     getCurPath(path) {
       this.$store.commit("changeCurPath", path);
     },
-     toTop() {
+    toTop() {
       document.documentElement.scrollTop = document.body.scrollTop = 0;
     }
   },
   activated() {
     const path = this.$route.path;
     this.getCurPath(path);
-    this.toTop()
+    this.toTop();
   }
 };
 </script>
 
 <style scoped>
 .collection {
-  background: url("~assets/boxImg/otherBg.jpg") no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  background: rgba(0, 0, 0, 0.5);
   height: 100%;
-  /* margin-bottom: 9vh; */
 }
 .content {
-  background: rgba(0, 0, 0, 0.5);
   padding-bottom: 1.25rem;
 }
 
@@ -118,8 +114,8 @@ export default {
   .mask img {
     width: 90%;
   }
-  .collection{
-     margin-bottom: 7vh;
+  .collection {
+    margin-bottom: 7vh;
   }
 }
 </style>

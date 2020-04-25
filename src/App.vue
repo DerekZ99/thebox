@@ -59,7 +59,9 @@ export default {
   }
 }
 #app {
-  background: #333438;
+  background: url("~assets/boxImg/otherBg.jpg") no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 @import "./assets/css/base.css";
 @font-face {

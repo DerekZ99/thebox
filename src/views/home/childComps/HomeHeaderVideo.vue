@@ -68,6 +68,8 @@ export default {
   height: 30vh;
   overflow: hidden;
   position: relative;
+  background: url("~assets/rapImg/6.jpg") no-repeat;
+  background-size: cover;
 }
 .header video {
   position: absolute;

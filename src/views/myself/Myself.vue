@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div >
     <div class="myself animated bounceInUp">
       <home-nav-bar v-if="$store.state.isShowFooter">
         <music-switch></music-switch>
@@ -63,13 +63,9 @@ export default {
 <style scoped>
 .myself {
 
-  background: url("~assets/boxImg/otherBg.jpg") no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  overflow: auto;
-}
-.row {
   background: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  height: 90vh;
 }
 .intro {
   margin: 20px 0;

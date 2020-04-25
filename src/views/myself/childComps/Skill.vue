@@ -1,18 +1,29 @@
 <template>
   <div class="skill">
     <h2>我的技能树</h2>
+    <!-- 树img -->
+    <div
+      v-if="isShowSkill"
+      :class="isShowSkill?'':'animated bounceOut'"
+      class="tree-box"
+      @click="treeClick"
+    >
+      <h5 class="treeInfo">点击查看</h5>
+      <img class="tree" src="~assets/skillBg/tree.png" alt />
+    </div>
+
     <!-- 技能树展示 -->
-    <div class="skill-tree">
+    <div v-show="!isShowSkill" class="skill-tree">
       <!-- 展示html的技能 -->
       <div class="skill-top">
-        <skill-item class="html">
+        <skill-item class="html animated bounceIn">
           <span slot="skillExtend">HTML</span>
           <span slot="skillExtend">HTML5</span>
           <span slot="skillDetail">标签语义化</span>
           <span slot="skillDetail">新增的标签</span>
           <img class="skillImg" slot="skillType" src="~assets/skillBg/html.jpg" alt />
         </skill-item>
-        <skill-item class="css">
+        <skill-item class="css animated bounceIn delay-1s">
           <span slot="skillExtend">CSS</span>
           <span slot="skillExtend">CSS3</span>
           <span slot="skillExtend">BootStrap</span>
@@ -25,7 +36,7 @@
         </skill-item>
       </div>
       <div class="skill-bottom">
-        <skill-item class="js">
+        <skill-item class="js animated bounceIn delay-2s">
           <span slot="skillExtend">原生js</span>
           <span slot="skillExtend">Jquery</span>
           <span slot="skillExtend">Vue.js</span>
@@ -36,7 +47,7 @@
           <span slot="skillDetail">利用第三方库或插件实现更多功能与效果</span>
           <img class="skillImg" slot="skillType" src="~assets/skillBg/javas.jpg" alt />
         </skill-item>
-        <skill-item class="ajax">
+        <skill-item class="ajax animated bounceIn delay-3s">
           <span slot="skillExtend">axios库</span>
           <span slot="skillExtend">mongodb数据库</span>
           <span slot="skillExtend">express框架（了解）</span>
@@ -59,12 +70,16 @@ export default {
   },
   data() {
     return {
-      curIndex: 0
+      curIndex: 0,
+      isShowSkill: true
     };
   },
   methods: {
     mouseOn(index) {
       this.curIndex = index;
+    },
+    treeClick() {
+      this.isShowSkill = !this.isShowSkill;
     }
   }
 };
@@ -81,14 +96,28 @@ export default {
   font-family: starter;
   color: #fff;
 }
-/* .skill-tree{
-  display: flex;
+.tree-box {
+  position: relative;
+}
+.tree {
+  width: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.treeInfo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 99;
+  color: #ffffff;
+  transform: translate(-50%, -200%);
+}
 
-} */
 .skill-top,
 .skill-bottom {
   display: flex;
-  flex-wrap:wrap ;
+  flex-wrap: wrap;
 }
 
 .html {
@@ -111,5 +140,4 @@ export default {
   flex: 1;
   margin: 5px;
 }
-
 </style>
