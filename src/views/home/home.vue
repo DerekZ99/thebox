@@ -1,7 +1,9 @@
 <template>
   <div class="home animated slideInUp">
-    <home-nav-bar v-if="$store.state.isShowFooter"></home-nav-bar>
-    <home-box-animation></home-box-animation>
+    <div class="content">
+      <home-nav-bar v-if="$store.state.isShowFooter"></home-nav-bar>
+      <home-box-animation></home-box-animation>
+    </div>
   </div>
 </template>
 
@@ -12,7 +14,7 @@ import HomeBoxAnimation from "./childComps/HomeBoxAnimation";
 export default {
   components: {
     HomeNavBar,
-    HomeBoxAnimation, 
+    HomeBoxAnimation
   },
   methods: {
     getCurPath(path) {
@@ -28,9 +30,15 @@ export default {
 
 <style scoped>
 .home {
-  overflow: hidden;
-  background: rgba(0, 0, 0, 0.8);
+  background: url("~assets/boxImg/box1.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
   margin-top: 0;
   height: 60vh;
+}
+.content {
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  overflow: auto;
 }
 </style>
