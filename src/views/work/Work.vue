@@ -9,9 +9,7 @@
           :span="$store.state.isShowFooter ? 16 : 20"
           :offset="$store.state.isShowFooter ? 4 : 2"
         >
-          <p class="intro">
-            Hi!欢迎你来到技术分享区。我将会在这里分享一些自己在制作网页时用到的一些技术与技巧
-          </p>
+          <p class="intro">Hi!欢迎你来到技术分享区。我将会在这里分享一些自己在制作网页时用到的一些技术与技巧</p>
           <p class="intro">
             这个网站是利用Vue + element
             UI搭建完成的。这里大量的使用了Animated.css动画插件。接下来，我会利用折叠面板的方式把内容呈现在里面，虽然这样对与阅读的连贯性不太好，但是整体看上去会比较干净。如果你下次再想来查看一些内容时，寻找起来比较方便。
@@ -52,7 +50,10 @@ export default {
       this.$store.commit("changeCurPath", path);
     },
     getOffsetTop(val) {
-      this.$refs.work.scrollTo(0, val) || this.$refs.work.scrollTop(0, val);
+      let that = this;
+      this.$nextTick(() => {
+        that.$refs.work.scrollTo(0, val)
+      });
     }
   },
   activated() {
