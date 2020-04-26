@@ -1,19 +1,3 @@
-# test
+# 个人博客 The Box
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 这里主要分享一些技术心得和关于我的个人介绍
