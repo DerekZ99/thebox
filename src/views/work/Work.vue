@@ -50,10 +50,7 @@ export default {
       this.$store.commit("changeCurPath", path);
     },
     getOffsetTop(val) {
-      let that = this;
-      this.$nextTick(() => {
-        that.$refs.work.scrollTo(0, val)
-      });
+      this.$refs.work.scrollTop = val;
     }
   },
   activated() {
