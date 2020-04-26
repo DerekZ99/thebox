@@ -7,7 +7,7 @@
       <img slot="item-icon-activated" src="~assets/tabbar/home (2).png" alt />
     </tab-bar-item>
     <tab-bar-item path="/work">
-      <div slot="item-text">关于本页</div>
+      <div slot="item-text">技术分享</div>
       <img slot="item-logo" src="~assets/tabbar/instruction.png" alt />
       <img slot="item-icon-activated" src="~assets/tabbar/instruction (2).png" alt />
     </tab-bar-item>

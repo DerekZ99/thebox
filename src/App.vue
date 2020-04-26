@@ -58,11 +58,15 @@ export default {
   .pushDown {
     margin-top: 40px;
   }
+  
 }
 #app {
   background: url("~assets/boxImg/otherBg.jpg") no-repeat;
   background-attachment: fixed;
   background-size: cover;
+}
+i{
+  color: red
 }
 @import "./assets/css/base.css";
 @font-face {

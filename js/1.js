@@ -8,7 +8,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _home_childComps_HomeNavBar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../home/childComps/HomeNavBar */ \"./src/views/home/childComps/HomeNavBar.vue\");\n/* harmony import */ var _childComps_WorkFolder__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./childComps/WorkFolder */ \"./src/views/work/childComps/WorkFolder.vue\");\n/* harmony import */ var components_content_musicSwitch_MusicSwitch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/content/musicSwitch/MusicSwitch */ \"./src/components/content/musicSwitch/MusicSwitch.vue\");\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  components: {\n    HomeNavBar: _home_childComps_HomeNavBar__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n    WorkFolder: _childComps_WorkFolder__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n    MusicSwitch: components_content_musicSwitch_MusicSwitch__WEBPACK_IMPORTED_MODULE_2__[\"default\"]\n  },\n  data: function data() {\n    return {\n      isFixHeight: true\n    };\n  },\n  methods: {\n    fixHeight: function fixHeight(num) {\n      if (!num) {\n        this.isFixHeight = true;\n      } else {\n        this.isFixHeight = false;\n      }\n    },\n    getCurPath: function getCurPath(path) {\n      this.$store.commit(\"changeCurPath\", path);\n    },\n    getOffsetTop: function getOffsetTop(val) {\n      this.$refs.work.scrollTo(0, val);\n    }\n  },\n  activated: function activated() {\n    var path = this.$route.path;\n    this.getCurPath(path);\n  }\n});\n\n//# sourceURL=webpack:///./src/views/work/Work.vue?./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _home_childComps_HomeNavBar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../home/childComps/HomeNavBar */ \"./src/views/home/childComps/HomeNavBar.vue\");\n/* harmony import */ var _childComps_WorkFolder__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./childComps/WorkFolder */ \"./src/views/work/childComps/WorkFolder.vue\");\n/* harmony import */ var components_content_musicSwitch_MusicSwitch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! components/content/musicSwitch/MusicSwitch */ \"./src/components/content/musicSwitch/MusicSwitch.vue\");\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  components: {\n    HomeNavBar: _home_childComps_HomeNavBar__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n    WorkFolder: _childComps_WorkFolder__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n    MusicSwitch: components_content_musicSwitch_MusicSwitch__WEBPACK_IMPORTED_MODULE_2__[\"default\"]\n  },\n  data: function data() {\n    return {\n      isFixHeight: true\n    };\n  },\n  methods: {\n    fixHeight: function fixHeight(num) {\n      if (!num) {\n        this.isFixHeight = true;\n      } else {\n        this.isFixHeight = false;\n      }\n    },\n    getCurPath: function getCurPath(path) {\n      this.$store.commit(\"changeCurPath\", path);\n    },\n    getOffsetTop: function getOffsetTop(val) {\n      this.$refs.work.scrollTo(0, val) || this.$refs.work.scrollTop(0, val);\n    }\n  },\n  activated: function activated() {\n    var path = this.$route.path;\n    this.getCurPath(path);\n  }\n});\n\n//# sourceURL=webpack:///./src/views/work/Work.vue?./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -44,7 +44,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n/* harmony default export */ __webpack_exports__[\"default\"] = ({});\n\n//# sourceURL=webpack:///./src/views/work/childComps/GeneralInfo.vue?./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n/* harmony default export */ __webpack_exports__[\"default\"] = ({});\n\n//# sourceURL=webpack:///./src/views/work/childComps/GeneralInfo.vue?./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -68,7 +68,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n/* harmony default export */ __webpack_exports__[\"default\"] = ({});\n\n//# sourceURL=webpack:///./src/views/work/childComps/IntroAnimation.vue?./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n/* harmony default export */ __webpack_exports__[\"default\"] = ({});\n\n//# sourceURL=webpack:///./src/views/work/childComps/IntroAnimation.vue?./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -104,7 +104,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var core
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"div\", { ref: \"work\", staticClass: \"work\" }, [\n    _c(\n      \"div\",\n      { staticClass: \"content\", class: { fixHeight: _vm.isFixHeight } },\n      [\n        _vm.$store.state.isShowFooter\n          ? _c(\"home-nav-bar\", [_c(\"music-switch\")], 1)\n          : _vm._e(),\n        _c(\n          \"el-row\",\n          { staticClass: \"row\" },\n          [\n            _c(\n              \"el-col\",\n              {\n                attrs: {\n                  span: _vm.$store.state.isShowFooter ? 16 : 20,\n                  offset: _vm.$store.state.isShowFooter ? 4 : 2\n                }\n              },\n              [\n                _c(\"p\", { staticClass: \"intro\" }, [\n                  _vm._v(\n                    \" Hi!欢迎你来到本站的制作。我将会在这里分享一些自己在制作这个网站时遇到的坑，以及一些小技巧。虽然说基本上都是基础操作。但是这也算是我成长的印记。当然，我也十分希望可以得到你宝贵的意见。 :) \"\n                  )\n                ]),\n                _c(\"p\", { staticClass: \"intro\" }, [\n                  _vm._v(\n                    \" 这个网站是利用Vue + element UI开发的。是我独立制作的第一个完整的网页。意义上来说，也是一个我拿来练手的网站。硬着头皮把自己想的需求给写出来了，当然有很多还是没有实现的。But Anyway, 对自己还是满意的。这里还大量的用了Animated.css这个神奇的插件。Ok，接下来，我会利用折叠面板的方式把内容呈现在里面，虽然这样对与阅读的连贯性不太好，但是整体看上去会比较干净。如果你下次再想来查看一些内容时，寻找起来比较方便 \"\n                  )\n                ]),\n                _c(\"work-folder\", {\n                  on: {\n                    getOffset: _vm.getOffsetTop,\n                    folderClose: _vm.fixHeight\n                  }\n                })\n              ],\n              1\n            )\n          ],\n          1\n        )\n      ],\n      1\n    )\n  ])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/views/work/Work.vue?./node_modules/cache-loader/dist/cjs.js?%7B%22cacheDirectory%22:%22node_modules/.cache/vue-loader%22,%22cacheIdentifier%22:%22ad52c68a-vue-loader-template%22%7D!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"div\", { ref: \"work\", staticClass: \"work\" }, [\n    _c(\n      \"div\",\n      { staticClass: \"content\", class: { fixHeight: _vm.isFixHeight } },\n      [\n        _vm.$store.state.isShowFooter\n          ? _c(\"home-nav-bar\", [_c(\"music-switch\")], 1)\n          : _vm._e(),\n        _c(\n          \"el-row\",\n          { staticClass: \"row\" },\n          [\n            _c(\n              \"el-col\",\n              {\n                attrs: {\n                  span: _vm.$store.state.isShowFooter ? 16 : 20,\n                  offset: _vm.$store.state.isShowFooter ? 4 : 2\n                }\n              },\n              [\n                _c(\"p\", { staticClass: \"intro\" }, [\n                  _vm._v(\n                    \" Hi!欢迎你来到技术分享区。我将会在这里分享一些自己在制作网页时用到的一些技术与技巧 \"\n                  )\n                ]),\n                _c(\"p\", { staticClass: \"intro\" }, [\n                  _vm._v(\n                    \" 这个网站是利用Vue + element UI搭建完成的。这里大量的使用了Animated.css动画插件。接下来，我会利用折叠面板的方式把内容呈现在里面，虽然这样对与阅读的连贯性不太好，但是整体看上去会比较干净。如果你下次再想来查看一些内容时，寻找起来比较方便。 \"\n                  )\n                ]),\n                _c(\"work-folder\", {\n                  on: {\n                    getOffset: _vm.getOffsetTop,\n                    folderClose: _vm.fixHeight\n                  }\n                })\n              ],\n              1\n            )\n          ],\n          1\n        )\n      ],\n      1\n    )\n  ])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/views/work/Work.vue?./node_modules/cache-loader/dist/cjs.js?%7B%22cacheDirectory%22:%22node_modules/.cache/vue-loader%22,%22cacheIdentifier%22:%22ad52c68a-vue-loader-template%22%7D!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -140,7 +140,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _vm._m(0)\n}\nvar staticRenderFns = [\n  function() {\n    var _vm = this\n    var _h = _vm.$createElement\n    var _c = _vm._self._c || _h\n    return _c(\"div\", { staticClass: \"intro\" }, [\n      _c(\"p\", [_vm._v(\"·先来讲讲这个网站从0到有一个雏形的过程\")]),\n      _c(\"p\", [\n        _vm._v(\"·使用vue cli3 先创建一个项目 npm 输入 vue create + “项目名”\")\n      ]),\n      _c(\"p\", [\n        _vm._v(\n          \" ·然后，依次在src目录创建文件夹：router（配置路由映射关系）,views（存放不同页面）,components(用来存放不同的组件),这是一个静态页面，如果需要联网的话则需要创建network文件夹去封装axios \"\n        )\n      ]),\n      _c(\"p\", [_vm._v(\"·文件夹创建完成之后，安装相关依赖\")]),\n      _c(\"p\", [_vm._v(\"·下面是我的package.Json文件中的内容\")]),\n      _c(\"img\", {\n        attrs: { src: __webpack_require__(/*! assets/workImg/packageJson.png */ \"./src/assets/workImg/packageJson.png\"), alt: \"\" }\n      }),\n      _c(\"p\", [_vm._v(\"·安装完成之后，来到main.js文件中引用这些组件\")]),\n      _c(\"img\", {\n        attrs: { src: __webpack_require__(/*! assets/workImg/mainjs.png */ \"./src/assets/workImg/mainjs.png\"), alt: \"\" }\n      }),\n      _c(\"p\", [\n        _vm._v(\"·如果你完成了上述的操作，那么恭喜你，You're ready to go!\")\n      ])\n    ])\n  }\n]\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/views/work/childComps/GeneralInfo.vue?./node_modules/cache-loader/dist/cjs.js?%7B%22cacheDirectory%22:%22node_modules/.cache/vue-loader%22,%22cacheIdentifier%22:%22ad52c68a-vue-loader-template%22%7D!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _vm._m(0)\n}\nvar staticRenderFns = [\n  function() {\n    var _vm = this\n    var _h = _vm.$createElement\n    var _c = _vm._self._c || _h\n    return _c(\"div\", { staticClass: \"intro\" }, [\n      _c(\"p\", [\n        _vm._v(\n          \"·每当开始一个项目的时候，都需要做初始化的工作。我这里会介绍如何使用vue cli3 进行一个项目的初始化工作\"\n        )\n      ]),\n      _c(\"p\", [\n        _vm._v(\"·使用vue cli3 先创建一个项目 npm 输入 vue create + “项目名”\")\n      ]),\n      _c(\"p\", [\n        _vm._v(\n          \" ·然后，依次在src目录创建文件夹：router（配置路由映射关系）,views（存放不同页面）,components(用来存放不同的组件),这是一个静态页面，如果需要联网的话则需要创建network文件夹去封装axios。下面是src目录中的内容 \"\n        )\n      ]),\n      _c(\"img\", {\n        attrs: { src: __webpack_require__(/*! assets/workImg/folder.png */ \"./src/assets/workImg/folder.png\"), alt: \"\" }\n      }),\n      _c(\"p\", [\n        _vm._v(\n          \"·文件夹创建完成之后，安装相关依赖。如果已经有package.Json文件的话，则可以在终端直接输入npm install命令来进行安装。下面是我的package.Json文件中的内容\"\n        )\n      ]),\n      _c(\"img\", {\n        attrs: { src: __webpack_require__(/*! assets/workImg/packageJson.png */ \"./src/assets/workImg/packageJson.png\"), alt: \"\" }\n      }),\n      _c(\"p\", [_vm._v(\"·安装完成之后，来到main.js文件中引用这些组件\")]),\n      _c(\"img\", {\n        attrs: { src: __webpack_require__(/*! assets/workImg/mainjs.png */ \"./src/assets/workImg/mainjs.png\"), alt: \"\" }\n      }),\n      _c(\"p\", [\n        _vm._v(\"·当然，你可能还需要用git来管理你的项目。这里就不详细介绍了\")\n      ])\n    ])\n  }\n]\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/views/work/childComps/GeneralInfo.vue?./node_modules/cache-loader/dist/cjs.js?%7B%22cacheDirectory%22:%22node_modules/.cache/vue-loader%22,%22cacheIdentifier%22:%22ad52c68a-vue-loader-template%22%7D!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -152,7 +152,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _vm._m(0)\n}\nvar staticRenderFns = [\n  function() {\n    var _vm = this\n    var _h = _vm.$createElement\n    var _c = _vm._self._c || _h\n    return _c(\"div\", { staticClass: \"intro\" }, [\n      _c(\"p\", [\n        _vm._v(\n          \" ·Header部分摆视频是一种非常常见的技术。其实现的基本方法就是定一个div。这个div需要一个高度，我写了height=30vh，这样div的高度可以根据浏览器窗口的高度进行一个调节。给div一个相对定位（relative）。然后再再div内部插入一个视频。让视频绝对定位（absolute）水平和垂直都居中。然后给视频一个宽度百分百。此时你就可以在这个div看到视频的中间位置了。然后再给div上一个overflow:hidden就可以把多出来的视频部分给砍掉啦。原理可以看下图 \"\n        )\n      ]),\n      _c(\"img\", {\n        attrs: { src: __webpack_require__(/*! assets/workImg/headVideoPaint.png */ \"./src/assets/workImg/headVideoPaint.png\"), alt: \"\" }\n      }),\n      _c(\"p\", [\n        _vm._v(\n          \" ·然后就是如何把logo加上视频并且给视频一个薄膜。我的做法依旧简单暴力。先来个h1（据说这样做是为了seo优化）。这个h1就是薄膜。先给他来个相对定位，height=百分百，然后background:rgba。此时一张膜就已经出来了。再再这个h1内部一个div，然后让这个div绝对定位水平垂直居中。你的logo就制作完成了 \"\n        )\n      ]),\n      _c(\"img\", {\n        staticClass: \"bigimg\",\n        attrs: { src: __webpack_require__(/*! assets/workImg/headVideoLogo.png */ \"./src/assets/workImg/headVideoLogo.png\"), alt: \"\" }\n      }),\n      _c(\"img\", {\n        attrs: { src: __webpack_require__(/*! assets/workImg/headVideoCss.png */ \"./src/assets/workImg/headVideoCss.png\"), alt: \"\" }\n      }),\n      _c(\"p\", [\n        _vm._v(\n          \" ·在完成了上面的操作之后，一个酷炫的头部部分就完成了。当然，为了使这个头部更加有看点。我还添加了一些功能性的东西。 \"\n        )\n      ]),\n      _c(\"p\", [\n        _vm._v(\n          \" ·让鼠标放在视频区域的时候，可以弹出控制视频播放，和开启视频声音的switch。这样对用户体验好 \"\n        )\n      ]),\n      _c(\"img\", {\n        staticClass: \"bigimg\",\n        attrs: { src: __webpack_require__(/*! assets/workImg/headVideoSwitch.png */ \"./src/assets/workImg/headVideoSwitch.png\"), alt: \"\" }\n      }),\n      _c(\"p\", [\n        _vm._v(\n          \" ·其实做法也很简单，你已经知道怎么做了。先在data()里面定义一个isShowBox变量，默认为false。然后给这个大div绑定一个鼠标经过触发的事件 @mouseenter，这个事件触发的时候执行一个函数 mouseOn()，这个函数可以修改isShowBox的值为反值（也就是true）。 \"\n        )\n      ]),\n      _c(\"p\", [\n        _vm._v(\n          ' ·然后再在h1标签中添加两个switch box，给他们上一个v-show=\"isShowBox\"。完成了上述的操作，这个显示和隐藏switch box的功能也就完成了。然后再把它们用绝对定位定到右下角就Ok了 '\n        )\n      ]),\n      _c(\"img\", {\n        staticClass: \"bigimg\",\n        attrs: { src: __webpack_require__(/*! assets/workImg/headVideoShowBox.png */ \"./src/assets/workImg/headVideoShowBox.png\"), alt: \"\" }\n      }),\n      _c(\"p\", [\n        _vm._v(\n          \" ·别忘了，刚刚的操作只是鼠标放在上面让其显示，当鼠标离开的时候他们不会隐藏。你还需要加一步操作，就是@mouseleave的时候再执行一次mouseOn()函数。这样当你鼠标离开的时候isShowbox当前的值（true）又会被取反变为false。那么这个switch box则会被隐藏 \"\n        )\n      ]),\n      _c(\"img\", {\n        attrs: { src: __webpack_require__(/*! assets/workImg/mouseOn.png */ \"./src/assets/workImg/mouseOn.png\"), alt: \"\" }\n      }),\n      _c(\"img\", {\n        staticClass: \"bigimg\",\n        attrs: { src: __webpack_require__(/*! assets/workImg/headerVideoData.png */ \"./src/assets/workImg/headerVideoData.png\"), alt: \"\" }\n      }),\n      _c(\"p\", [\n        _vm._v(\n          \" ·当你学会怎么做显示和隐藏switch box的话，你可以利用其核心原理把视频的静音和关闭功能也做出来。还是一样的套路，还是那个味。细心的你一定也留意到transition坨臃肿的标签。它的主要功能是让switch box的隐藏和显示做一个过渡效果。其实有一个trick（小技巧）可以实现这个功能，能少写很多代码。我会在一个折叠面板中专门谈这个技巧 \"\n        )\n      ])\n    ])\n  }\n]\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/views/work/childComps/HeaderVideo.vue?./node_modules/cache-loader/dist/cjs.js?%7B%22cacheDirectory%22:%22node_modules/.cache/vue-loader%22,%22cacheIdentifier%22:%22ad52c68a-vue-loader-template%22%7D!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _vm._m(0)\n}\nvar staticRenderFns = [\n  function() {\n    var _vm = this\n    var _h = _vm.$createElement\n    var _c = _vm._self._c || _h\n    return _c(\"div\", { staticClass: \"intro\" }, [\n      _c(\"p\", [\n        _vm._v(\n          \" ·Header部分摆视频是一种非常常见的技术。其实现的基本方法就是定一个div。这个div需要一个高度，我写了height=30vh，这样div的高度可以根据浏览器窗口的高度进行一个调节。给div一个相对定位（relative）。然后在这个div内部插入一个视频标签。让视频绝对定位（absolute）水平和垂直都居中。然后给视频一个宽度百分百。此时你就可以在这个div看到视频的中间位置了。然后再给div上一个overflow:hidden就可以把多出来的视频部分给砍掉啦。原理可以看下图 \"\n        )\n      ]),\n      _c(\"img\", {\n        attrs: { src: __webpack_require__(/*! assets/workImg/headVideoPaint.png */ \"./src/assets/workImg/headVideoPaint.png\"), alt: \"\" }\n      }),\n      _c(\"p\", [\n        _vm._v(\n          \" ·然后就是如何把logo加上视频并且给视频一个薄膜。我的做法依旧简单。先来个h1加在视频的下方,可以把他当做一个div。然后给他来个相对定位，height=百分百，然后background:rgba。此时一张膜就已经出来了。再在这个h1内部添加一个div，在div中添加文字或者图片。然后让这个div绝对定位水平垂直居中。你的logo就制作完成了 \"\n        )\n      ]),\n      _c(\"img\", {\n        staticClass: \"bigimg\",\n        attrs: { src: __webpack_require__(/*! assets/workImg/headVideoLogo.png */ \"./src/assets/workImg/headVideoLogo.png\"), alt: \"\" }\n      }),\n      _c(\"img\", {\n        attrs: { src: __webpack_require__(/*! assets/workImg/headVideoCss.png */ \"./src/assets/workImg/headVideoCss.png\"), alt: \"\" }\n      }),\n      _c(\"p\", [\n        _vm._v(\n          \" ·在完成了上面的操作之后，一个酷炫的头部部分就完成了。当然，为了使这个头部更加有看点。我还添加了一些功能性的东西。 \"\n        )\n      ]),\n      _c(\"p\", [\n        _vm._v(\n          \" ·让鼠标放在视频区域的时候，可以弹出控制视频播放，和开启视频声音的switch。这样对用户体验好 \"\n        )\n      ]),\n      _c(\"img\", {\n        staticClass: \"bigimg\",\n        attrs: { src: __webpack_require__(/*! assets/workImg/headVideoSwitch.png */ \"./src/assets/workImg/headVideoSwitch.png\"), alt: \"\" }\n      }),\n      _c(\"p\", [\n        _vm._v(\n          \" ·其实做法也很简单，你已经知道怎么做了。先在data()里面定义一个isShowBox变量，默认为false。然后给这个大div绑定一个鼠标经过触发的事件 @mouseenter，这个事件触发的时候执行一个函数 mouseOn()，这个函数可以修改isShowBox的值为反值（也就是true）。 \"\n        )\n      ]),\n      _c(\"p\", [\n        _vm._v(\n          ' ·然后再在h1标签中添加两个switch box，给他们上一个v-show=\"isShowBox\"。完成了上述的操作，这个显示和隐藏switch box的功能也就完成了。然后再把它们用绝对定位定到右下角就Ok了 '\n        )\n      ]),\n      _c(\"img\", {\n        staticClass: \"bigimg\",\n        attrs: { src: __webpack_require__(/*! assets/workImg/headVideoShowBox.png */ \"./src/assets/workImg/headVideoShowBox.png\"), alt: \"\" }\n      }),\n      _c(\"p\", [\n        _vm._v(\n          \" ·别忘了，刚刚的操作只是鼠标放在上面让其显示，当鼠标离开的时候他们不会隐藏。你还需要加一步操作，就是@mouseleave的时候再执行一次mouseOn()函数。这样当你鼠标离开的时候isShowbox当前的值（true）又会被取反变为false。那么这个switch box则会被隐藏 \"\n        )\n      ]),\n      _c(\"img\", {\n        attrs: { src: __webpack_require__(/*! assets/workImg/mouseOn.png */ \"./src/assets/workImg/mouseOn.png\"), alt: \"\" }\n      }),\n      _c(\"img\", {\n        staticClass: \"bigimg\",\n        attrs: { src: __webpack_require__(/*! assets/workImg/headerVideoData.png */ \"./src/assets/workImg/headerVideoData.png\"), alt: \"\" }\n      }),\n      _c(\"p\", [\n        _vm._v(\n          \" ·当你学会怎么做显示和隐藏switch box的话，你可以利用其核心原理把视频的静音和关闭功能也做出来。还是一样的套路，还是那个味。细心的你一定也留意到transition坨臃肿的标签。它的主要功能是让switch box的隐藏和显示做一个过渡效果。其实有一个trick（小技巧）可以实现这个功能，能少写很多代码。我会在一个折叠面板中专门谈这个技巧 \"\n        )\n      ])\n    ])\n  }\n]\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/views/work/childComps/HeaderVideo.vue?./node_modules/cache-loader/dist/cjs.js?%7B%22cacheDirectory%22:%22node_modules/.cache/vue-loader%22,%22cacheIdentifier%22:%22ad52c68a-vue-loader-template%22%7D!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -164,7 +164,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _vm._m(0)\n}\nvar staticRenderFns = [\n  function() {\n    var _vm = this\n    var _h = _vm.$createElement\n    var _c = _vm._self._c || _h\n    return _c(\"div\", { staticClass: \"intro\" }, [\n      _c(\"p\", [\n        _vm._v(\n          \" ·开场动画这个效果不错吧？这也是提升网页逼格的一种手段。开场动画连贯着首页内容一并呈现，在这背后其实暗藏许多玄机 \"\n        )\n      ]),\n      _c(\"p\", [\n        _vm._v(\n          \" ·其实开场动画是首页的一个子组件，我的做法就是首页动画显示的时候，首页其他内容就藏起来不要显示。等动画结束的时候，隐藏动画组件，同时显示主页内容就好了 \"\n        )\n      ]),\n      _c(\"p\", [\n        _vm._v(\n          \" ·首先需要的是创建组件，并他们放到一个地方管理起来。我在views这个目录下创了一个home文件夹，这个是专门用来放置与home（首页）相关的组件。然后在home文件夹中新建一个childComps文件夹。这个是专门用来管理home首页的子组件的。做法如下图 \"\n        )\n      ]),\n      _c(\"img\", {\n        attrs: { src: __webpack_require__(/*! assets/workImg/homeFolder.png */ \"./src/assets/workImg/homeFolder.png\"), alt: \"\" }\n      }),\n      _c(\"p\", [\n        _vm._v(\n          \" ·然而，我犯了个一个错误，我把这个专门用来做开头的动画的组件放到了全局的components文件夹中。虽然不会影响这个动画的实现。但是不利于管理。所以下一次再想创建新组件的时候，一定要在事先想好到底放在哪里会比较合适 \"\n        )\n      ]),\n      _c(\"img\", {\n        attrs: { src: __webpack_require__(/*! assets/workImg/components.png */ \"./src/assets/workImg/components.png\"), alt: \"\" }\n      }),\n      _c(\"p\", [\n        _vm._v(\n          \" ·开头动画的主要实现，其实不是在这个StarterAnimation组件中。这个组件的作用其实就是插入了图片，以及调了一些文字的样式。那是怎样做到其显示几秒之后就消失了呢？这些操作，都是在home.vue这个父级组件完成的 \"\n        )\n      ]),\n      _c(\"p\", [\n        _vm._v(\n          \" ·OK，那么接下来我们来到这个home.vue文件中。在这个文件中要做的第一件事。就是三部曲引用我们的StarterAnimation子组件。相信你也应该知道怎么做了 \"\n        )\n      ]),\n      _c(\"p\", [\n        _vm._v(\n          \" ·引入完成之后，可以大致的把开头动画组件，以及首页的其他内容组件给分成两个板块。其他内容组件用一个div包裹起来。就像这样 \"\n        )\n      ]),\n      _c(\"img\", {\n        staticClass: \"bigimg\",\n        attrs: { src: __webpack_require__(/*! assets/workImg/homeTemplate.png */ \"./src/assets/workImg/homeTemplate.png\"), alt: \"\" }\n      }),\n      _c(\"p\", [\n        _vm._v(\n          \" ·细心的你一定发现了，我在这两个板块的标签上添加上了v-if和v-else。这代表着这个动画组件和其他内容只能显示一个，一个显示，另一个就会隐藏。 \"\n        )\n      ]),\n      _c(\"p\", [\n        _vm._v(\n          \" ·但是这里有一个问题。如果你在一秒钟之内同时进行隐藏动画和显示内容的话。他们之间就没有了过渡的效果了。所以需要让显示和隐藏的动作有一个时间差。我的做法是，先隐藏，然后过了一秒之后再显示内容。这样过渡效果就实现了。 \"\n        )\n      ]),\n      _c(\"p\", [\n        _vm._v(\n          \"那应该怎么把这过渡的时间差给挤出来呢？我在这里用了一个比较low的办法。就是settimeout做一个定时器。假如动画是在5秒钟之后消失，那么我的内容就在6秒钟后显示出来\"\n        )\n      ]),\n      _c(\"img\", {\n        attrs: { src: __webpack_require__(/*! assets/workImg/settimeout.png */ \"./src/assets/workImg/settimeout.png\"), alt: \"\" }\n      }),\n      _c(\"p\", [\n        _vm._v(\n          \"·对了，这里还需要补充一个重要的东西。关于这个显示和隐藏的动画，我是借助了animated.css这个强大的插件来实现的。具体做法，就是给一个标签上一个class。然后前缀加上animated 后缀加上动画的名字。我将会专门开一个折叠板来讲这个东西（这个东西好用了，上瘾了）\"\n        )\n      ]),\n      _c(\"p\", [\n        _vm._v(\n          \"·OK，那我在这里总结一下。开头动画的渐入特效是由animated.css实现。隐藏和显示的过渡效果则是由时间差实现。如果你get到这个技巧的话。你肯定会爱不释手。\"\n        )\n      ])\n    ])\n  }\n]\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/views/work/childComps/IntroAnimation.vue?./node_modules/cache-loader/dist/cjs.js?%7B%22cacheDirectory%22:%22node_modules/.cache/vue-loader%22,%22cacheIdentifier%22:%22ad52c68a-vue-loader-template%22%7D!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _vm._m(0)\n}\nvar staticRenderFns = [\n  function() {\n    var _vm = this\n    var _h = _vm.$createElement\n    var _c = _vm._self._c || _h\n    return _c(\"div\", { staticClass: \"intro\" }, [\n      _c(\"p\", [\n        _vm._v(\n          \"·配置前端路由是一项很重要的操作，当页面发生跳转行为的时候，可以传参，也可以做重定向。\"\n        )\n      ]),\n      _c(\"p\", [_vm._v(\"·第一件要做的事就是配置路由映射关系\")]),\n      _c(\"img\", {\n        staticClass: \"bigimg\",\n        attrs: { src: __webpack_require__(/*! assets/workImg/router/initalwork.png */ \"./src/assets/workImg/router/initalwork.png\"), alt: \"\" }\n      }),\n      _c(\"p\", [\n        _vm._v(\n          \"·当想让页面发生跳转时，可以使用this.$router.push(传入跳转的路由地址)来实现。\"\n        )\n      ]),\n      _c(\"img\", {\n        staticClass: \"bigimg\",\n        attrs: { src: __webpack_require__(/*! assets/workImg/router/routerpush.png */ \"./src/assets/workImg/router/routerpush.png\"), alt: \"\" }\n      }),\n      _c(\"i\", [_vm._v(\"==============这是一条分割线==============\")]),\n      _c(\"p\", [\n        _vm._v(\n          \"·这是最基本的路由跳转操作，当然如果你想要传值，比如传id的时候，可以这样做\"\n        )\n      ]),\n      _c(\"p\", [_vm._v(\"1 先在router目录下的index.js中配置路由\")]),\n      _c(\"img\", {\n        attrs: {\n          src: __webpack_require__(/*! assets/workImg/router/routerparams1.png */ \"./src/assets/workImg/router/routerparams1.png\"),\n          alt: \"\"\n        }\n      }),\n      _c(\"p\", [_vm._v(\"2 在触发页面跳转的地方传入值\")]),\n      _c(\"img\", {\n        attrs: {\n          src: __webpack_require__(/*! assets/workImg/router/routerparams2.png */ \"./src/assets/workImg/router/routerparams2.png\"),\n          alt: \"\"\n        }\n      }),\n      _c(\"p\", [_vm._v(\"3 在成功跳转页面后，在新的页面存入这个值\")]),\n      _c(\"img\", {\n        attrs: {\n          src: __webpack_require__(/*! assets/workImg/router/routerparams3.png */ \"./src/assets/workImg/router/routerparams3.png\"),\n          alt: \"\"\n        }\n      }),\n      _c(\"p\", [\n        _vm._v(\n          \"·这个类似于get方法。传的值会出现在浏览上方的url中。然后页面就可以根据这个传过来的值，在数据中找到不同的内容来呈现在页面上\"\n        )\n      ]),\n      _c(\"i\", [_vm._v(\"==============这是一条分割线==============\")]),\n      _c(\"p\", [\n        _vm._v(\n          \"·说到get方法，那也有类似post方法的路由传参方方式。那就是用params\"\n        )\n      ]),\n      _c(\"p\", [_vm._v(\"·先在router目录下配置路由\")]),\n      _c(\"img\", {\n        attrs: {\n          src: __webpack_require__(/*! assets/workImg/router/routerparams4.png */ \"./src/assets/workImg/router/routerparams4.png\"),\n          alt: \"\"\n        }\n      }),\n      _c(\"p\", [\n        _vm._v(\n          \"·然后在原页面触发路由跳转，我这里用登录来模拟这个场景，当我点击了登录按钮的时候页面会发生跳转\"\n        )\n      ]),\n      _c(\"img\", {\n        staticClass: \"bigimg\",\n        attrs: {\n          src: __webpack_require__(/*! assets/workImg/router/routerparams5.png */ \"./src/assets/workImg/router/routerparams5.png\"),\n          alt: \"\"\n        }\n      }),\n      _c(\"p\", [\n        _c(\"img\", {\n          attrs: {\n            src: __webpack_require__(/*! assets/workImg/router/routerparams7.png */ \"./src/assets/workImg/router/routerparams7.png\"),\n            alt: \"\"\n          }\n        })\n      ]),\n      _c(\"p\", [\n        _vm._v(\n          \" 然后在假设我在views1的输入框中输入了用户名：“张三”，密码：1234，利用路由传参的方式可以将我在views1中输入的内容呈现在views2中 \"\n        )\n      ]),\n      _c(\"img\", {\n        staticClass: \"bigimg\",\n        attrs: {\n          src: __webpack_require__(/*! assets/workImg/router/routerparams6.png */ \"./src/assets/workImg/router/routerparams6.png\"),\n          alt: \"\"\n        }\n      }),\n      _c(\"p\", [\n        _c(\"img\", {\n          attrs: {\n            src: __webpack_require__(/*! assets/workImg/router/routerparams8.png */ \"./src/assets/workImg/router/routerparams8.png\"),\n            alt: \"\"\n          }\n        })\n      ])\n    ])\n  }\n]\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/views/work/childComps/IntroAnimation.vue?./node_modules/cache-loader/dist/cjs.js?%7B%22cacheDirectory%22:%22node_modules/.cache/vue-loader%22,%22cacheIdentifier%22:%22ad52c68a-vue-loader-template%22%7D!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -176,7 +176,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"div\",\n    { staticClass: \"workFolder\" },\n    [\n      _c(\n        \"el-collapse\",\n        {\n          ref: \"collapse\",\n          attrs: { accordion: \"\" },\n          on: { change: _vm.handleChange },\n          model: {\n            value: _vm.activeNames,\n            callback: function($$v) {\n              _vm.activeNames = $$v\n            },\n            expression: \"activeNames\"\n          }\n        },\n        [\n          _c(\"el-collapse-item\", { attrs: { title: \"开始工作\", name: \"1\" } }, [\n            _c(\"div\", { staticClass: \"folder\" }, [_c(\"general-info\")], 1)\n          ]),\n          _c(\"el-collapse-item\", { attrs: { title: \"开场动画\", name: \"2\" } }, [\n            _c(\"div\", { staticClass: \"folder\" }, [_c(\"intro-animation\")], 1)\n          ]),\n          _c(\n            \"el-collapse-item\",\n            { attrs: { title: \"Header视频\", name: \"3\" } },\n            [_c(\"div\", { staticClass: \"folder\" }, [_c(\"header-video\")], 1)]\n          ),\n          _c(\n            \"el-collapse-item\",\n            { attrs: { title: \"Animated.Css特效\", name: \"4\" } },\n            [_c(\"div\", { staticClass: \"folder\" }, [_c(\"animated-css\")], 1)]\n          ),\n          _c(\n            \"el-collapse-item\",\n            { attrs: { title: \"Element Ui库\", name: \"5\" } },\n            [_c(\"div\", { staticClass: \"folder\" }, [_c(\"element-ui\")], 1)]\n          )\n        ],\n        1\n      ),\n      _vm.$store.state.isShowFooter\n        ? _c(\"work-list\", {\n            directives: [\n              {\n                name: \"show\",\n                rawName: \"v-show\",\n                value: _vm.activeNames,\n                expression: \"activeNames\"\n              }\n            ],\n            class: _vm.activeNames ? \"animated bounceIn\" : \"\",\n            attrs: { title: _vm.item },\n            on: { listItemClick: _vm.listItemClicked }\n          })\n        : _vm._e()\n    ],\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/views/work/childComps/WorkFolder.vue?./node_modules/cache-loader/dist/cjs.js?%7B%22cacheDirectory%22:%22node_modules/.cache/vue-loader%22,%22cacheIdentifier%22:%22ad52c68a-vue-loader-template%22%7D!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"div\",\n    { staticClass: \"workFolder\" },\n    [\n      _c(\n        \"el-collapse\",\n        {\n          ref: \"collapse\",\n          attrs: { accordion: \"\" },\n          on: { change: _vm.handleChange },\n          model: {\n            value: _vm.activeNames,\n            callback: function($$v) {\n              _vm.activeNames = $$v\n            },\n            expression: \"activeNames\"\n          }\n        },\n        [\n          _c(\n            \"el-collapse-item\",\n            { attrs: { title: \"项目初始化工作\", name: \"1\" } },\n            [_c(\"div\", { staticClass: \"folder\" }, [_c(\"general-info\")], 1)]\n          ),\n          _c(\n            \"el-collapse-item\",\n            { attrs: { title: \"配置前端路由\", name: \"2\" } },\n            [_c(\"div\", { staticClass: \"folder\" }, [_c(\"intro-animation\")], 1)]\n          ),\n          _c(\n            \"el-collapse-item\",\n            { attrs: { title: \"Header视频\", name: \"3\" } },\n            [_c(\"div\", { staticClass: \"folder\" }, [_c(\"header-video\")], 1)]\n          ),\n          _c(\n            \"el-collapse-item\",\n            { attrs: { title: \"Animated.Css特效\", name: \"4\" } },\n            [_c(\"div\", { staticClass: \"folder\" }, [_c(\"animated-css\")], 1)]\n          ),\n          _c(\n            \"el-collapse-item\",\n            { attrs: { title: \"Element Ui库\", name: \"5\" } },\n            [_c(\"div\", { staticClass: \"folder\" }, [_c(\"element-ui\")], 1)]\n          )\n        ],\n        1\n      ),\n      _vm.$store.state.isShowFooter\n        ? _c(\"work-list\", {\n            directives: [\n              {\n                name: \"show\",\n                rawName: \"v-show\",\n                value: _vm.activeNames,\n                expression: \"activeNames\"\n              }\n            ],\n            class: _vm.activeNames ? \"animated bounceIn\" : \"\",\n            attrs: { title: _vm.item },\n            on: { listItemClick: _vm.listItemClicked }\n          })\n        : _vm._e()\n    ],\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/views/work/childComps/WorkFolder.vue?./node_modules/cache-loader/dist/cjs.js?%7B%22cacheDirectory%22:%22node_modules/.cache/vue-loader%22,%22cacheIdentifier%22:%22ad52c68a-vue-loader-template%22%7D!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -210,7 +210,7 @@ eval("var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ \"./
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \"\\n.work[data-v-0e826176] {\\r\\n  overflow: auto;\\r\\n  background: rgba(0, 0, 0, 0.5);\\r\\n  background-size: cover;\\r\\n  height: 90vh;\\n}\\n.intro[data-v-0e826176] {\\r\\n  margin: 20px 0;\\r\\n  font-size: 14px;\\r\\n  color: #ffffff;\\n}\\n.fixHeight[data-v-0e826176] {\\r\\n  height: 100%;\\n}\\n@media screen and (max-width: 479px) {\\n.work[data-v-0e826176] {\\r\\n    line-height: 1.5625rem;\\n}\\n}\\r\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/views/work/Work.vue?./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-oneOf-1-2!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
+eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \"\\n.work[data-v-0e826176] {\\r\\n  overflow: auto;\\r\\n  background: rgba(0, 0, 0, 0.5);\\r\\n  background-size: cover;\\r\\n  height: 90vh;\\n}\\n.intro[data-v-0e826176] {\\r\\n  margin: 20px 0;\\r\\n  font-size: 14px;\\r\\n  color: #ffffff;\\r\\n  line-height: 1.5625rem;\\n}\\n.fixHeight[data-v-0e826176] {\\r\\n  height: 100%;\\n}\\r\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/views/work/Work.vue?./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-oneOf-1-2!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -265,7 +265,7 @@ eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../.
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \"\\n.intro p[data-v-45f58a9b] {\\r\\n  margin: 10px 0;\\n}\\n.bigimg[data-v-45f58a9b] {\\r\\n  width: 100%;\\n}\\n@media screen and (max-width: 479px) {\\nimg[data-v-45f58a9b] {\\r\\n    width: 100%;\\n}\\n}\\r\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/views/work/childComps/IntroAnimation.vue?./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-oneOf-1-2!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
+eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \"\\n.intro p[data-v-45f58a9b] {\\r\\n  margin: 10px 0;\\n}\\r\\n/* .intro i {\\r\\n  color: red;\\r\\n} */\\n@media screen and (max-width: 479px) {\\nimg[data-v-45f58a9b] {\\r\\n    width: 100%;\\n}\\n}\\n@media screen and (min-width: 480px) {\\n@media screen and (max-width: 768px) {\\n.bigimg[data-v-45f58a9b] {\\r\\n      width: 100%;\\n}\\n}\\n}\\r\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/views/work/childComps/IntroAnimation.vue?./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-oneOf-1-2!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -423,17 +423,6 @@ eval("module.exports = __webpack_require__.p + \"img/animatedIntro3.1ceb6cc3.png
 
 /***/ }),
 
-/***/ "./src/assets/workImg/components.png":
-/*!*******************************************!*\
-  !*** ./src/assets/workImg/components.png ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = __webpack_require__.p + \"img/components.d3985d33.png\";\n\n//# sourceURL=webpack:///./src/assets/workImg/components.png?");
-
-/***/ }),
-
 /***/ "./src/assets/workImg/elementIntro1.png":
 /*!**********************************************!*\
   !*** ./src/assets/workImg/elementIntro1.png ***!
@@ -453,6 +442,17 @@ eval("module.exports = __webpack_require__.p + \"img/elementIntro1.7d59a94d.png\
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("module.exports = __webpack_require__.p + \"img/elementIntro2.3d96f051.png\";\n\n//# sourceURL=webpack:///./src/assets/workImg/elementIntro2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/workImg/folder.png":
+/*!***************************************!*\
+  !*** ./src/assets/workImg/folder.png ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"img/folder.ce2c8114.png\";\n\n//# sourceURL=webpack:///./src/assets/workImg/folder.png?");
 
 /***/ }),
 
@@ -522,28 +522,6 @@ eval("module.exports = __webpack_require__.p + \"img/headerVideoData.da1a8193.pn
 
 /***/ }),
 
-/***/ "./src/assets/workImg/homeFolder.png":
-/*!*******************************************!*\
-  !*** ./src/assets/workImg/homeFolder.png ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = __webpack_require__.p + \"img/homeFolder.259ce74d.png\";\n\n//# sourceURL=webpack:///./src/assets/workImg/homeFolder.png?");
-
-/***/ }),
-
-/***/ "./src/assets/workImg/homeTemplate.png":
-/*!*********************************************!*\
-  !*** ./src/assets/workImg/homeTemplate.png ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("module.exports = __webpack_require__.p + \"img/homeTemplate.ac5a2117.png\";\n\n//# sourceURL=webpack:///./src/assets/workImg/homeTemplate.png?");
-
-/***/ }),
-
 /***/ "./src/assets/workImg/importAnimated.png":
 /*!***********************************************!*\
   !*** ./src/assets/workImg/importAnimated.png ***!
@@ -599,14 +577,113 @@ eval("module.exports = __webpack_require__.p + \"img/packageJson.d5d383d6.png\";
 
 /***/ }),
 
-/***/ "./src/assets/workImg/settimeout.png":
-/*!*******************************************!*\
-  !*** ./src/assets/workImg/settimeout.png ***!
-  \*******************************************/
+/***/ "./src/assets/workImg/router/initalwork.png":
+/*!**************************************************!*\
+  !*** ./src/assets/workImg/router/initalwork.png ***!
+  \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"img/settimeout.e7cb8455.png\";\n\n//# sourceURL=webpack:///./src/assets/workImg/settimeout.png?");
+eval("module.exports = __webpack_require__.p + \"img/initalwork.c8bb23c1.png\";\n\n//# sourceURL=webpack:///./src/assets/workImg/router/initalwork.png?");
+
+/***/ }),
+
+/***/ "./src/assets/workImg/router/routerparams1.png":
+/*!*****************************************************!*\
+  !*** ./src/assets/workImg/router/routerparams1.png ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"img/routerparams1.17e3ce65.png\";\n\n//# sourceURL=webpack:///./src/assets/workImg/router/routerparams1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/workImg/router/routerparams2.png":
+/*!*****************************************************!*\
+  !*** ./src/assets/workImg/router/routerparams2.png ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"img/routerparams2.17d0044e.png\";\n\n//# sourceURL=webpack:///./src/assets/workImg/router/routerparams2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/workImg/router/routerparams3.png":
+/*!*****************************************************!*\
+  !*** ./src/assets/workImg/router/routerparams3.png ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"img/routerparams3.86518094.png\";\n\n//# sourceURL=webpack:///./src/assets/workImg/router/routerparams3.png?");
+
+/***/ }),
+
+/***/ "./src/assets/workImg/router/routerparams4.png":
+/*!*****************************************************!*\
+  !*** ./src/assets/workImg/router/routerparams4.png ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"img/routerparams4.7e7de65f.png\";\n\n//# sourceURL=webpack:///./src/assets/workImg/router/routerparams4.png?");
+
+/***/ }),
+
+/***/ "./src/assets/workImg/router/routerparams5.png":
+/*!*****************************************************!*\
+  !*** ./src/assets/workImg/router/routerparams5.png ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"img/routerparams5.0702c271.png\";\n\n//# sourceURL=webpack:///./src/assets/workImg/router/routerparams5.png?");
+
+/***/ }),
+
+/***/ "./src/assets/workImg/router/routerparams6.png":
+/*!*****************************************************!*\
+  !*** ./src/assets/workImg/router/routerparams6.png ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"img/routerparams6.153d29b0.png\";\n\n//# sourceURL=webpack:///./src/assets/workImg/router/routerparams6.png?");
+
+/***/ }),
+
+/***/ "./src/assets/workImg/router/routerparams7.png":
+/*!*****************************************************!*\
+  !*** ./src/assets/workImg/router/routerparams7.png ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"img/routerparams7.6851d9d0.png\";\n\n//# sourceURL=webpack:///./src/assets/workImg/router/routerparams7.png?");
+
+/***/ }),
+
+/***/ "./src/assets/workImg/router/routerparams8.png":
+/*!*****************************************************!*\
+  !*** ./src/assets/workImg/router/routerparams8.png ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"img/routerparams8.607f0013.png\";\n\n//# sourceURL=webpack:///./src/assets/workImg/router/routerparams8.png?");
+
+/***/ }),
+
+/***/ "./src/assets/workImg/router/routerpush.png":
+/*!**************************************************!*\
+  !*** ./src/assets/workImg/router/routerpush.png ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"img/routerpush.38af297d.png\";\n\n//# sourceURL=webpack:///./src/assets/workImg/router/routerpush.png?");
 
 /***/ }),
 

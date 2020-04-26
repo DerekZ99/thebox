@@ -1,11 +1,11 @@
 <template>
   <div class="intro">
     <p>
-      ·Header部分摆视频是一种非常常见的技术。其实现的基本方法就是定一个div。这个div需要一个高度，我写了height=30vh，这样div的高度可以根据浏览器窗口的高度进行一个调节。给div一个相对定位（relative）。然后再再div内部插入一个视频。让视频绝对定位（absolute）水平和垂直都居中。然后给视频一个宽度百分百。此时你就可以在这个div看到视频的中间位置了。然后再给div上一个overflow:hidden就可以把多出来的视频部分给砍掉啦。原理可以看下图
+      ·Header部分摆视频是一种非常常见的技术。其实现的基本方法就是定一个div。这个div需要一个高度，我写了height=30vh，这样div的高度可以根据浏览器窗口的高度进行一个调节。给div一个相对定位（relative）。然后在这个div内部插入一个视频标签。让视频绝对定位（absolute）水平和垂直都居中。然后给视频一个宽度百分百。此时你就可以在这个div看到视频的中间位置了。然后再给div上一个overflow:hidden就可以把多出来的视频部分给砍掉啦。原理可以看下图
     </p>
     <img src="~assets/workImg/headVideoPaint.png" alt="" />
     <p>
-      ·然后就是如何把logo加上视频并且给视频一个薄膜。我的做法依旧简单暴力。先来个h1（据说这样做是为了seo优化）。这个h1就是薄膜。先给他来个相对定位，height=百分百，然后background:rgba。此时一张膜就已经出来了。再再这个h1内部一个div，然后让这个div绝对定位水平垂直居中。你的logo就制作完成了
+      ·然后就是如何把logo加上视频并且给视频一个薄膜。我的做法依旧简单。先来个h1加在视频的下方,可以把他当做一个div。然后给他来个相对定位，height=百分百，然后background:rgba。此时一张膜就已经出来了。再在这个h1内部添加一个div，在div中添加文字或者图片。然后让这个div绝对定位水平垂直居中。你的logo就制作完成了
     </p>
     <img class="bigimg" src="~assets/workImg/headVideoLogo.png" alt="" />
     <img src="~assets/workImg/headVideoCss.png" alt="" />

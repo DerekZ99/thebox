@@ -2,13 +2,13 @@
   <div class="workFolder">
     <el-collapse ref="collapse" v-model="activeNames" @change="handleChange" accordion>
       <!-- generalInfo内容 -->
-      <el-collapse-item title="开始工作" name="1">
+      <el-collapse-item title="项目初始化工作" name="1">
         <div class="folder">
           <general-info></general-info>
         </div>
       </el-collapse-item>
       <!-- IntroAnimation内容 -->
-      <el-collapse-item title="开场动画" name="2">
+      <el-collapse-item title="配置前端路由" name="2">
         <div class="folder">
           <intro-animation></intro-animation>
         </div>

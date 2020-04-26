@@ -50,9 +50,9 @@ export default {
       that.isMuted = val;
     });
   },
-  watch:{
-    isMuted(){
-      this.$bus.$emit("playMusic", this.isMuted)
+  watch: {
+    isMuted() {
+      this.$bus.$emit("playMusic", this.isMuted);
     }
   },
   methods: {

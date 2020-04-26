@@ -9,8 +9,8 @@
       </h1>
       <div class="nav-bar-bg animated bounceInRight delay-1s">
         <slot></slot>
-        <home-nav-bar-item v-if="!$store.state.isIpadSize" path="/myself">关于我</home-nav-bar-item>
-        <home-nav-bar-item v-if="!$store.state.isIpadSize" path="/work">关于本页</home-nav-bar-item>
+        <home-nav-bar-item v-if="!$store.state.isIpadSize" path="/myself">自我介绍</home-nav-bar-item>
+        <home-nav-bar-item v-if="!$store.state.isIpadSize" path="/work">技术分享</home-nav-bar-item>
         <home-nav-bar-item v-if="!$store.state.isIpadSize" path="/collection">我的收藏</home-nav-bar-item>
 
         <div @click="menuClick" v-if="$store.state.isIpadSize" class="list">
@@ -25,7 +25,7 @@
         :class="isShowTab?'animated slideInDown':''"
       >
         <home-nav-bar-item @click.native="menuClick" class="hidden-tab-item" path="/myself">关于我</home-nav-bar-item>
-        <home-nav-bar-item @click.native="menuClick" class="hidden-tab-item" path="/work">关于本页</home-nav-bar-item>
+        <home-nav-bar-item @click.native="menuClick" class="hidden-tab-item" path="/work">技术分享</home-nav-bar-item>
         <home-nav-bar-item @click.native="menuClick" class="hidden-tab-item" path="/collection">我的收藏</home-nav-bar-item>
       </div>
     </el-col>

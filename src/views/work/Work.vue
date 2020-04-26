@@ -10,14 +10,11 @@
           :offset="$store.state.isShowFooter ? 4 : 2"
         >
           <p class="intro">
-            Hi!欢迎你来到本站的制作。我将会在这里分享一些自己在制作这个网站时遇到的坑，以及一些小技巧。虽然说基本上都是基础操作。但是这也算是我成长的印记。当然，我也十分希望可以得到你宝贵的意见。
-            :)
+            Hi!欢迎你来到技术分享区。我将会在这里分享一些自己在制作网页时用到的一些技术与技巧
           </p>
           <p class="intro">
             这个网站是利用Vue + element
-            UI开发的。是我独立制作的第一个完整的网页。意义上来说，也是一个我拿来练手的网站。硬着头皮把自己想的需求给写出来了，当然有很多还是没有实现的。But
-            Anyway,
-            对自己还是满意的。这里还大量的用了Animated.css这个神奇的插件。Ok，接下来，我会利用折叠面板的方式把内容呈现在里面，虽然这样对与阅读的连贯性不太好，但是整体看上去会比较干净。如果你下次再想来查看一些内容时，寻找起来比较方便
+            UI搭建完成的。这里大量的使用了Animated.css动画插件。接下来，我会利用折叠面板的方式把内容呈现在里面，虽然这样对与阅读的连贯性不太好，但是整体看上去会比较干净。如果你下次再想来查看一些内容时，寻找起来比较方便。
           </p>
           <!-- 折叠板 -->
           <work-folder @getOffset="getOffsetTop" @folderClose="fixHeight"></work-folder>
@@ -55,7 +52,7 @@ export default {
       this.$store.commit("changeCurPath", path);
     },
     getOffsetTop(val) {
-      this.$refs.work.scrollTo(0, val);
+      this.$refs.work.scrollTo(0, val) || this.$refs.work.scrollTop(0, val);
     }
   },
   activated() {
@@ -77,13 +74,9 @@ export default {
   margin: 20px 0;
   font-size: 14px;
   color: #ffffff;
+  line-height: 1.5625rem;
 }
 .fixHeight {
   height: 100%;
-}
-@media screen and (max-width: 479px) {
-  .work {
-    line-height: 1.5625rem;
-  }
 }
 </style>

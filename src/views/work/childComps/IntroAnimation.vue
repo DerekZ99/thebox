@@ -1,39 +1,33 @@
 <template>
   <div class="intro">
+    <p>·配置前端路由是一项很重要的操作，当页面发生跳转行为的时候，可以传参，也可以做重定向。</p>
+    <p>·第一件要做的事就是配置路由映射关系</p>
+    <img class="bigimg" src="~assets/workImg/router/initalwork.png" alt />
+    <p>·当想让页面发生跳转时，可以使用this.$router.push(传入跳转的路由地址)来实现。</p>
+    <img class="bigimg" src="~assets/workImg/router/routerpush.png" alt />
+    <i>==============这是一条分割线==============</i>
+    <p>·这是最基本的路由跳转操作，当然如果你想要传值，比如传id的时候，可以这样做</p>
+    <p>1 先在router目录下的index.js中配置路由</p>
+    <img src="~assets/workImg/router/routerparams1.png" alt />
+    <p>2 在触发页面跳转的地方传入值</p>
+    <img src="~assets/workImg/router/routerparams2.png" alt />
+    <p>3 在成功跳转页面后，在新的页面存入这个值</p>
+    <img src="~assets/workImg/router/routerparams3.png" alt />
+    <p>·这个类似于get方法。传的值会出现在浏览上方的url中。然后页面就可以根据这个传过来的值，在数据中找到不同的内容来呈现在页面上</p>
+    <i>==============这是一条分割线==============</i>
+    <p>·说到get方法，那也有类似post方法的路由传参方方式。那就是用params</p>
+    <p>·先在router目录下配置路由</p>
+    <img src="~assets/workImg/router/routerparams4.png" alt />
+    <p>·然后在原页面触发路由跳转，我这里用登录来模拟这个场景，当我点击了登录按钮的时候页面会发生跳转</p>
+    <img class="bigimg" src="~assets/workImg/router/routerparams5.png" alt />
     <p>
-      ·开场动画这个效果不错吧？这也是提升网页逼格的一种手段。开场动画连贯着首页内容一并呈现，在这背后其实暗藏许多玄机
+      <img src="~assets/workImg/router/routerparams7.png" alt />
     </p>
     <p>
-      ·其实开场动画是首页的一个子组件，我的做法就是首页动画显示的时候，首页其他内容就藏起来不要显示。等动画结束的时候，隐藏动画组件，同时显示主页内容就好了
+      然后在假设我在views1的输入框中输入了用户名：“张三”，密码：1234，利用路由传参的方式可以将我在views1中输入的内容呈现在views2中
     </p>
-    <p>
-      ·首先需要的是创建组件，并他们放到一个地方管理起来。我在views这个目录下创了一个home文件夹，这个是专门用来放置与home（首页）相关的组件。然后在home文件夹中新建一个childComps文件夹。这个是专门用来管理home首页的子组件的。做法如下图
-    </p>
-    <img src="~assets/workImg/homeFolder.png" alt="" />
-    <p>
-      ·然而，我犯了个一个错误，我把这个专门用来做开头的动画的组件放到了全局的components文件夹中。虽然不会影响这个动画的实现。但是不利于管理。所以下一次再想创建新组件的时候，一定要在事先想好到底放在哪里会比较合适
-    </p>
-    <img src="~assets/workImg/components.png" alt="" />
-    <p>
-      ·开头动画的主要实现，其实不是在这个StarterAnimation组件中。这个组件的作用其实就是插入了图片，以及调了一些文字的样式。那是怎样做到其显示几秒之后就消失了呢？这些操作，都是在home.vue这个父级组件完成的
-    </p>
-    <p>
-      ·OK，那么接下来我们来到这个home.vue文件中。在这个文件中要做的第一件事。就是三部曲引用我们的StarterAnimation子组件。相信你也应该知道怎么做了
-    </p>
-    <p>
-      ·引入完成之后，可以大致的把开头动画组件，以及首页的其他内容组件给分成两个板块。其他内容组件用一个div包裹起来。就像这样
-    </p>
-    <img class="bigimg" src="~assets/workImg/homeTemplate.png" alt="" />
-    <p>
-      ·细心的你一定发现了，我在这两个板块的标签上添加上了v-if和v-else。这代表着这个动画组件和其他内容只能显示一个，一个显示，另一个就会隐藏。
-    </p>
-    <p>
-      ·但是这里有一个问题。如果你在一秒钟之内同时进行隐藏动画和显示内容的话。他们之间就没有了过渡的效果了。所以需要让显示和隐藏的动作有一个时间差。我的做法是，先隐藏，然后过了一秒之后再显示内容。这样过渡效果就实现了。
-    </p>
-    <p>那应该怎么把这过渡的时间差给挤出来呢？我在这里用了一个比较low的办法。就是settimeout做一个定时器。假如动画是在5秒钟之后消失，那么我的内容就在6秒钟后显示出来</p>
-    <img src="~assets/workImg/settimeout.png" alt="">
-    <p>·对了，这里还需要补充一个重要的东西。关于这个显示和隐藏的动画，我是借助了animated.css这个强大的插件来实现的。具体做法，就是给一个标签上一个class。然后前缀加上animated 后缀加上动画的名字。我将会专门开一个折叠板来讲这个东西（这个东西好用了，上瘾了）</p>
-    <p>·OK，那我在这里总结一下。开头动画的渐入特效是由animated.css实现。隐藏和显示的过渡效果则是由时间差实现。如果你get到这个技巧的话。你肯定会爱不释手。</p>
+    <img class="bigimg" src="~assets/workImg/router/routerparams6.png" alt="">
+    <p><img src="~assets/workImg/router/routerparams8.png" alt=""></p>
   </div>
 </template>
 
@@ -45,12 +39,20 @@ export default {};
 .intro p {
   margin: 10px 0;
 }
-.bigimg {
-  width: 100%;
-}
+/* .intro i {
+  color: red;
+} */
+
 @media screen and (max-width: 479px) {
   img {
     width: 100%;
+  }
+}
+@media screen and (min-width: 480px) {
+  @media screen and (max-width: 768px) {
+    .bigimg {
+      width: 100%;
+    }
   }
 }
 </style>
