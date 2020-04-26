@@ -70,6 +70,7 @@ export default {
   position: relative;
   background: url("~assets/rapImg/6.jpg") no-repeat;
   background-size: cover;
+  background-position-y: 50%;
 }
 .header video {
   position: absolute;

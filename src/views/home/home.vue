@@ -30,7 +30,7 @@ export default {
 
 <style scoped>
 .home {
-  background: url("~assets/boxImg/box1.jpg") no-repeat;
+  background: url("~assets/boxImg/code2.jpg") no-repeat;
   background-size: cover;
   background-position: 50% 50%;
   margin-top: 0;

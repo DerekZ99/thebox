@@ -31,7 +31,7 @@ export default {
 <style scoped>
 .starter {
   height: 90vh;
-  background: url("~assets/rapImg/robby.jpg") no-repeat;
+  background: url("~assets/boxImg/box1.jpg") no-repeat;
   background-size: cover;
   background-position-x: 50%;
 }

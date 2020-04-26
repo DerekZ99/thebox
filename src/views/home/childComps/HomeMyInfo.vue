@@ -94,6 +94,9 @@ export default {
 }
 .itemDetail h5 {
   font-size: 1rem;
+  padding: .125rem .3125rem;
+  border-radius: .3125rem;
+  border: .0625rem solid #ffffff;
 }
 @media screen and (max-width: 479px) {
   .myInfo{
