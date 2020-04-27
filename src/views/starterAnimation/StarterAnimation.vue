@@ -33,7 +33,7 @@ export default {
   height: 90vh;
   background: url("~assets/boxImg/box1.jpg") no-repeat;
   background-size: cover;
-  background-position-x: 50%;
+  background-position: 50%,50%;
 }
 .title {
   position: relative;
