@@ -22,7 +22,7 @@
         v-show="isShowTab"
         v-if="$store.state.isIpadSize"
         class="hidden-tab"
-        :class="isShowTab?'animated slideInDown':''"
+        :class="isShowTab?'animated slideInDown':'animated slideOutUp'"
       >
         <home-nav-bar-item @click.native="menuClick" class="hidden-tab-item" path="/myself">关于我</home-nav-bar-item>
         <home-nav-bar-item @click.native="menuClick" class="hidden-tab-item" path="/work">技术分享</home-nav-bar-item>
@@ -41,9 +41,24 @@ export default {
   },
   data() {
     return {
-      isShowTab: false
+      isShowTab: false,
+      successCount: 0
     };
   },
+  created() {
+    let that = this;
+    //这个事件由app.vue发过来,这里的操作是点击其他地方隐藏ipad size的导航栏
+    this.$bus.$on("hiddenTab", () => { 
+      if (that.isShowTab) {
+        that.successCount++;
+        if (that.successCount === 2) {
+          that.menuClick();
+          that.successCount = 0;
+        }
+      }
+    });
+  },
+
   methods: {
     jumpToHome() {
       this.$router.push("/home");
@@ -81,17 +96,14 @@ export default {
   height: 2.1875rem;
   position: relative;
 }
-.nav-bar-item {
-  position: absolute;
-  top: 0px;
-  width: 100px;
-  height: 100px;
-  z-index: 99;
-  background-color: pink;
-}
 .hidden-tab {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  /* background-color: #F8C087; */
+  border: 1px solid #BD6438;
+  border-radius: 25px;
+  margin-bottom: 5px;
+  padding: 5px;
 }
 </style>

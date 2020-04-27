@@ -19,32 +19,31 @@
         <skill-item class="html animated bounceIn">
           <span slot="skillExtend">HTML</span>
           <span slot="skillExtend">HTML5</span>
-          <span slot="skillDetail">标签语义化</span>
-          <span slot="skillDetail">新增的标签</span>
+          <span slot="skillDetail">熟悉标签语义化</span>
+          <span slot="skillDetail">熟悉新增的标签与新特性</span>
           <img class="skillImg" slot="skillType" src="~assets/skillBg/html.jpg" alt />
         </skill-item>
         <skill-item class="css animated bounceIn delay-1s">
           <span slot="skillExtend">CSS</span>
           <span slot="skillExtend">CSS3</span>
           <span slot="skillExtend">BootStrap</span>
-          <span slot="skillDetail">新增样式</span>
-          <span slot="skillDetail">新增的选择器</span>
-          <span slot="skillDetail">flex布局与响应式布局</span>
-          <span slot="skillDetail">动画，过渡，定位</span>
-          <span slot="skillDetail">媒体查询，适配</span>
+          <span slot="skillDetail">掌握新增样式与选择器</span>
+          <span slot="skillDetail">熟练掌握flex布局与响应式布局</span>
+          <span slot="skillDetail">熟练掌握动画，过渡，定位</span>
+          <span slot="skillDetail">熟悉媒体查询，rem适配</span>
           <img class="skillImg" slot="skillType" src="~assets/skillBg/css3.jpg" alt />
         </skill-item>
       </div>
       <div class="skill-bottom">
         <skill-item class="js animated bounceIn delay-2s">
-          <span slot="skillExtend">原生js</span>
-          <span slot="skillExtend">Jquery</span>
+          <span slot="skillExtend">JavaScript</span>
+          <span slot="skillExtend">Jquery（了解）</span>
           <span slot="skillExtend">Vue.js</span>
           <span slot="skillDetail">熟悉组件化，模块化开发</span>
           <span slot="skillDetail">熟悉ES6增强语法</span>
-          <span slot="skillDetail">使用vue-router配置路由映射关系</span>
-          <span slot="skillDetail">封装vue组件，实现组件的复用与管理</span>
-          <span slot="skillDetail">利用第三方库或插件实现更多功能与效果</span>
+          <span slot="skillDetail">熟练使用vue-router实现页面跳转和登录状态判断</span>
+          <span slot="skillDetail">封装组件，实现组件的复用与管理</span>
+          <span slot="skillDetail">利用vuex实现全局状态管理</span>
           <img class="skillImg" slot="skillType" src="~assets/skillBg/javas.jpg" alt />
         </skill-item>
         <skill-item class="ajax animated bounceIn delay-3s">
@@ -52,9 +51,10 @@
           <span slot="skillExtend">mongodb数据库</span>
           <span slot="skillExtend">express框架（了解）</span>
           <span slot="skillExtend">node.js（了解）</span>
-          <span slot="skillExtend">art-template（了解）</span>
-          <span slot="skillDetail">通过封装axios实现前后端数据交互</span>
-          <span slot="skillDetail">利用express框架定义路由</span>
+          <span slot="skillDetail">熟悉利用axios库实现前后端数据交互与数据接口管理</span>
+          <span slot="skillDetail">熟悉利用axios实现请求与响应拦截</span>
+          <span slot="skillDetail">熟悉利用express框架定义路由</span>
+          
           <img class="skillImg" slot="skillType" src="~assets/skillBg/ajax.png" alt />
         </skill-item>
       </div>
@@ -113,11 +113,14 @@ export default {
   color: #ffffff;
   transform: translate(-50%, -200%);
 }
-
+.treeInfo:hover{
+  cursor: pointer;
+}
 .skill-top,
 .skill-bottom {
   display: flex;
   flex-wrap: wrap;
+ 
 }
 
 .html {

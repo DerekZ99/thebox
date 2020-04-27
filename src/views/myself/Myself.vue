@@ -6,7 +6,6 @@
       </home-nav-bar>
       <el-row class="row">
         <el-col :span="$store.state.isShowFooter ?16:20 " :offset="$store.state.isShowFooter ?4:2 ">
-          <p class="intro">Hi,我们又见面了，那接下来我就来介绍一下我自己。</p>
           <Canada @imgClicked="imgClick"></Canada>
           <Skill></Skill>
         </el-col>
@@ -62,15 +61,10 @@ export default {
 
 <style scoped>
 .myself {
-  line-height: 1.5625rem;
+
   background: rgba(0, 0, 0, 0.5);
   overflow: auto;
   height: 90vh;
-}
-.intro {
-  margin: 20px 0;
-  color: aliceblue;
-  font-size: 0.875rem;
 }
 .mask {
   position: fixed;

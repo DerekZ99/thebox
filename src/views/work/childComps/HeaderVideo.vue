@@ -55,7 +55,7 @@ export default {};
     width: 100%;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 768px) {
   .bigimg {
     width: 100%;
   }

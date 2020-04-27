@@ -1,8 +1,10 @@
 <template>
   <div class="canada">
-    <p>我在我17岁那年，也就是2013年左右去了加拿大读书，在那呆了六年的时间。</p>
-    <p>我在一个叫belleville的小镇子读完了高中，完整的体验了三年的乡村生活。高中毕业之后，来到多伦多这个大城市开始了我的College生涯。</p>
-    <p>出国留学收获了什么？其实留学生挺苦的,用一句话概括那就是磨炼了自己。</p>
+    <p>我在我17岁,也就是2013年左右去了加拿大读书，在那呆了六年的时间。</p>
+    <p>虽然在College修的不是计算机专业，但是期间接触了编程，这使我对编程产生了极大的兴趣。回国后，就决定要钻研前端，做一名优秀的程序员。</p>
+    <p>在学习前端的历程中有遇到过不少的问题。当遇到bug的时候，我会先看报错信息，看看是哪里出了问题。然后再检查自己的代码是否有拼写错误。之后，再着重分析报错原因和思考解决方案。</p>
+    <p>在制作这个博客的过程中，我也收获了许多。我把它分享给我的朋友，让他们作为用户给我提出一些改进的意见。我会针对每一条意见作出相应的改进，完善和添加一些功能。比如添加点击图片放大功能，对图片加载过慢做一些优化，又或者是布局和背景图片方面的问题。</p>
+    <p>因此，我变得更加严谨，我会坚持贯彻这种严谨的态度，写出更好的代码</p>
     <el-collapse
       v-if="$store.state.isShowFooter"
       class="collapse"
@@ -11,7 +13,7 @@
     >
       <el-collapse-item title="这里有在加拿大拍的照片，点击下方图片可以放大。点击此处可以隐藏图片" name="1">
         <!-- 轮播图 -->
-        <el-carousel v-show="isShowSwiper" height="300px" :interval="8000">
+        <el-carousel v-show="isShowSwiper" :interval="8000">
           <el-carousel-item class="swiper" v-for="item in canadaImg" :key="item.id">
             <h3>{{ item.title }}</h3>
             <img v-lazy="item.img" class="image" alt @click="imgClick(item)" />
@@ -122,15 +124,17 @@ export default {
 <style>
 .canada {
   color: #ffffff;
-  font-size: 14px;
+  font-size: .875rem;
 }
 .canada p {
+  line-height: 1.5625rem;
   margin: 20px 0;
 }
 .canada .el-collapse {
   border: 1px solid #252526;
 }
 .canada .el-collapse-item__header {
+  height: 100%;
   padding-left: 10px;
   background-color: #ffd7a4;
   border: none;

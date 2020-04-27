@@ -5,7 +5,7 @@
       <home-header-video class="pushDown" v-show="$store.state.isShowVideo"></home-header-video>
     </div>
     <keep-alive>
-      <router-view :class="{pushDown:isShowTab}"></router-view>
+      <router-view @click.native="contentClick" :class="{pushDown:isShowTab}"></router-view>
     </keep-alive>
 
     <Footer v-if="$store.state.isShowFooter || $store.state.curPath == '/starter'"></Footer>
@@ -45,10 +45,16 @@ export default {
         this.getWinWidth();
       })();
     };
+
+    
   },
   methods: {
     getWinWidth() {
       this.$store.commit("showFooter", document.body.clientWidth);
+    },
+    contentClick(){
+      // 发到HomeNavBar
+      this.$bus.$emit('hiddenTab')
     }
   }
 };
@@ -58,15 +64,14 @@ export default {
   .pushDown {
     margin-top: 40px;
   }
-  
 }
 #app {
   background: url("~assets/boxImg/otherBg.jpg") no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
-i{
-  color: red
+i {
+  color: red;
 }
 @import "./assets/css/base.css";
 @font-face {

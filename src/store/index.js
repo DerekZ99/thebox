@@ -9,7 +9,7 @@ export default new Vuex.Store({
     isHideVideo: true,
     isShowFooter: false,
     isIpadSize:false,
-    curPath:''
+    curPath: '',
   },
   mutations: {
     changeCurPath(state, path) {
@@ -35,7 +35,7 @@ export default new Vuex.Store({
         state.isIpadSize = true
       } else
         state.isIpadSize = false
-    }
+    },
   },
   actions: {},
   modules: {}
