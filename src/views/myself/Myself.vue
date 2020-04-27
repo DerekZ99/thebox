@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div>
     <div class="myself animated bounceInUp">
       <home-nav-bar class="fixTab" v-if="$store.state.isShowFooter">
         <music-switch></music-switch>
@@ -61,7 +61,6 @@ export default {
 
 <style scoped>
 .myself {
-
   background: rgba(0, 0, 0, 0.5);
   overflow: auto;
   height: 90vh;
@@ -83,8 +82,8 @@ export default {
 }
 @media screen and (max-width: 479px) {
   .myself {
-  line-height: 1.5625rem;
-}
+    line-height: 1.5625rem;
+  }
   .maskImg {
     width: 90%;
   }
@@ -99,7 +98,6 @@ export default {
     }
   }
 }
-
 
 @media screen and (min-width: 769px) {
   .maskImg {

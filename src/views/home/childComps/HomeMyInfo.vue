@@ -116,6 +116,7 @@ export default {
   }
   .itemDetail h5 {
     font-size: 0.875rem;
+    padding: 0 3px;
   }
   .itemDetail img {
   border-radius: 50%;
