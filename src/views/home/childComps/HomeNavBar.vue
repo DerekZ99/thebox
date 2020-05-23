@@ -73,6 +73,8 @@ export default {
 <style scoped>
 .el-row {
   background-color: #1d1a1a;
+  border-top: 1px solid #252526;
+  border-bottom: 1px solid #252526;
   overflow: hidden;
 }
 .nav-bar-bg {

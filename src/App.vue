@@ -69,6 +69,7 @@ export default {
   background: url("~assets/boxImg/otherBg.jpg") no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  font-size: 16px;
 }
 i {
   color: red;

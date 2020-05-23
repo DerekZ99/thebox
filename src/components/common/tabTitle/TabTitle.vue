@@ -1,11 +1,11 @@
 <template>
   <div class="tab-title">
-    <div class="title-item"></div>
+    <!-- <div class="title-item"></div> -->
     <div class="title-item">
       <img v-show="$store.state.curPath == '/home'" src="~assets/rapImg/5.jpg" alt="">
       <p v-show="$store.state.curPath !== '/home'">the box</p>
     </div>
-    <div class="title-item">
+    <div class="title-item" v-if="$store.state.isShowFooter">
       <music-switch v-show="isShowSwitch"></music-switch>
     </div>
   </div>

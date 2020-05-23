@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <video
-      v-if="isCloseVideo"
+      v-if="isCloseVideo && $store.state.isShowFooter"
       class="video"
       src="~assets/headVideos/1.congradulation.mp4"
       autoplay
@@ -16,7 +16,7 @@
         enter-active-class="animated fadeInUp fast"
         leave-active-class="animated fadeOutDown fast"
       >
-        <div v-show="isShowCloseBox" class="clost-box">
+        <div v-if="$store.state.isShowFooter" v-show="isShowCloseBox" class="clost-box">
           已{{ isCloseVideo ? "开启" : "关闭" }}背景视频
           <el-switch v-model="isCloseVideo" active-color="#13ce66" inactive-color="#ff4949"></el-switch>
         </div>
@@ -26,7 +26,7 @@
         enter-active-class="animated fadeInUp fast"
         leave-active-class="animated fadeOutDown fast"
       >
-        <div v-show="isShowCloseBox" class="muted-box">
+        <div v-if="$store.state.isShowFooter" v-show="isShowCloseBox" class="muted-box">
           已{{isMuted?"开启":"关闭"}}背景音乐
           <el-switch v-model="isMuted" active-color="#13ce66" inactive-color="#ff4949"></el-switch>
         </div>
